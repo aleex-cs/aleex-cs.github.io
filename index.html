@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-lang="en">
 <head>
-  <!-- Privacy-friendly analytics by Plausible -->
+    <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-iPAoh3LnvLt3bFqvnuwO1.js"></script>
 <script>
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alex Cugnod Segovia — Data Scientist &amp; Statistician</title>
@@ -29,7 +28,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Privacy-friendly analytics (no cookies). Replace data-domain with your real GitHub Pages / custom domain before publishing. -->
 <script defer data-domain="aleex-cs.github.io" src="https://plausible.io/js/script.js"></script>
 <style>
 
@@ -406,7 +404,7 @@ footer p{margin-bottom:.3rem;}
       <a href="#formacion" data-i18n="nav.education">Education</a>
     </nav>
     <div class="top-actions">
-      <a class="cv-download" href="Alex_Cugnod_CV.pdf" download>
+      <a class="cv-download" id="cvDownloadDesktop" href="Alex_Cugnod_CV_EN.pdf" download>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
         <span data-i18n="actions.downloadCv">CV</span>
       </a>
@@ -424,7 +422,7 @@ footer p{margin-bottom:.3rem;}
     <a href="#proyectos" data-i18n="nav.projects">Projects</a>
     <a href="#habilidades" data-i18n="nav.skills">Skills</a>
     <a href="#formacion" data-i18n="nav.education">Education</a>
-    <a class="cv-download" style="margin-top:.6rem;" href="Alex_Cugnod_CV.pdf" download>
+    <a class="cv-download" id="cvDownloadMobile" style="margin-top:.6rem;" href="Alex_Cugnod_CV_EN.pdf" download>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
       <span data-i18n="actions.downloadCvFull">Download CV</span>
     </a>
@@ -620,11 +618,12 @@ footer p{margin-bottom:.3rem;}
         <p data-i18n="projects.minor.loglinearA.desc">Three-way contingency table analysis of the Spanish National Health Survey (ENSE 2017), studying associations between BMI, sex, age and region with Cochran–Mantel–Haenszel tests.</p>
         <a class="project-link" href="https://github.com/aleex-cs/loglinear-analysis" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub ↗</a>
       </div>
-      <div class="minor-card">
+      <a class="minor-card" style="display:block; text-decoration:none;" href="https://github.com/aleex-cs/loglinear-models" target="_blank" rel="noopener">
         <h4>loglinear-models</h4>
         <div class="project-tags"><span class="tag">R</span><span class="tag">Ordinal Data</span></div>
         <p data-i18n="projects.minor.loglinearM.desc">Log-linear modelling of ordinal contingency tables, with model selection by AIC and marginal homogeneity testing between symmetry and quasi-symmetry models.</p>
-      </div>
+        <span class="project-link" data-i18n="projects.viewGithub">View on GitHub ↗</span>
+      </a>
       <div class="minor-card">
         <h4>cycles-and-connected-components-in-graphs</h4>
         <div class="project-tags"><span class="tag">Python</span><span class="tag">Graph Theory</span></div>
@@ -957,6 +956,11 @@ function applyLanguage(lang){
   document.querySelectorAll('[data-lang-btn]').forEach(btn=>{
     btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === lang);
   });
+  const cvFile = 'Alex_Cugnod_CV_' + lang.toUpperCase() + '.pdf';
+  const cvDesktop = document.getElementById('cvDownloadDesktop');
+  const cvMobile = document.getElementById('cvDownloadMobile');
+  if(cvDesktop) cvDesktop.setAttribute('href', cvFile);
+  if(cvMobile) cvMobile.setAttribute('href', cvFile);
   document.documentElement.setAttribute('lang', lang);
   document.documentElement.setAttribute('data-lang', lang);
   try{ localStorage.setItem('cv-lang', lang); }catch(e){}
