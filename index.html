@@ -20,6 +20,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Alex Cugnod Segovia — Data Scientist &amp; Statistician">
 <meta name="twitter:description" content="Data Scientist &amp; Statistician — Renault Group, ITACyL.">
+<meta name="twitter:image" content="https://aleex-cs.github.io/og-image.png">
 
 <!-- Favicon (custom seal, inline SVG) -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Ccircle cx='22' cy='22' r='21' fill='%23F1E7D3' stroke='%2333513B' stroke-width='2'/%3E%3Ccircle cx='22' cy='22' r='16' fill='none' stroke='%23A9813F' stroke-width='1' stroke-dasharray='1.5 3'/%3E%3Ctext x='22' y='29' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='17' fill='%239C3B29'%3EAC%3C/text%3E%3C/svg%3E">
@@ -206,19 +207,37 @@ h1{
 .seal-link:nth-child(4) .badge-circle{background:var(--gold);}
 
 /* hero decorative panel */
-.hero-panel{position:relative;height:400px;perspective:1000px;}
+.hero-panel{position:relative;height:440px;perspective:1000px;}
+.hero-bg-art{position:absolute;inset:-10% -5%;z-index:0;opacity:.55;pointer-events:none;}
 .tilt-stage{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .15s ease-out;}
 
 .index-card{
   position:absolute; background:var(--cream-card); border:1px solid var(--line); border-radius:var(--radius-m);
-  box-shadow:var(--shadow-2); padding:1.1rem 1.25rem;
+  box-shadow:var(--shadow-2); padding:1.1rem 1.25rem; animation:floaty 6s ease-in-out infinite;
 }
 .index-card .num{font-family:var(--serif); font-weight:700; font-size:1.9rem; color:var(--forest-deep); line-height:1;}
 .index-card .lab{font-size:.72rem; text-transform:none; color:var(--ink-faint); font-weight:600; margin-top:.35rem;}
-.card-b{width:190px; top:12%; left:4%; transform:rotate(-5deg); z-index:2; border-left:4px solid var(--brick);}
-.card-c{width:210px; bottom:8%; right:2%; transform:rotate(3deg); z-index:3; border-left:4px solid var(--forest);}
+.card-b{width:190px; top:8%; left:2%; transform:rotate(-5deg); z-index:2; border-left:4px solid var(--brick); animation-delay:0s;}
+.card-c{width:210px; bottom:20%; right:0%; transform:rotate(3deg); z-index:3; border-left:4px solid var(--forest); animation-delay:.4s;}
+.card-d{width:170px; bottom:2%; left:16%; transform:rotate(2deg); z-index:4; border-left:4px solid var(--gold); animation-delay:.8s;}
+.card-d .langs{display:flex; gap:.4rem; margin-top:.3rem;}
+.card-d .langs span{
+  font-family:var(--sans); font-weight:800; font-size:.68rem; color:var(--cream-card);
+  background:var(--forest); padding:.2rem .4rem; border-radius:5px;
+}
+.card-d .langs span:nth-child(2){background:var(--brick);}
+.card-d .langs span:nth-child(3){background:var(--ink);}
 
-.seal-large{position:absolute; width:110px; height:110px; right:14%; top:2%; z-index:1; opacity:.9;}
+@keyframes floaty{
+  0%,100%{transform:translateY(0) rotate(var(--r,0deg));}
+  50%{transform:translateY(-10px) rotate(var(--r,0deg));}
+}
+.card-b{--r:-5deg;}
+.card-c{--r:3deg;}
+.card-d{--r:2deg;}
+
+.seal-large{position:absolute; width:110px; height:110px; right:20%; top:0%; z-index:1; opacity:.9;}
+@media (prefers-reduced-motion:reduce){ .index-card{animation:none;} }
 
 /* ============ SECTIONS ============ */
 main{position:relative;z-index:1;}
@@ -373,6 +392,7 @@ footer p{margin-bottom:.3rem;}
   .index-card{position:static;transform:none !important;margin-bottom:.8rem;width:100% !important;}
   .hero-panel{height:auto;}
   .seal-large{display:none;}
+  .hero-bg-art{display:none;}
   .tcard,.project-card,.skill-category,.education-card{padding:1.2rem;}
 }
 
@@ -459,6 +479,37 @@ footer p{margin-bottom:.3rem;}
     </div>
 
     <div class="hero-panel">
+      <svg class="hero-bg-art" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="var(--forest)" stroke-width="1.1" stroke-opacity=".35">
+          <line x1="60" y1="90" x2="180" y2="150"/>
+          <line x1="180" y1="150" x2="150" y2="270"/>
+          <line x1="180" y1="150" x2="320" y2="120"/>
+          <line x1="320" y1="120" x2="420" y2="200"/>
+          <line x1="150" y1="270" x2="260" y2="330"/>
+          <line x1="260" y1="330" x2="400" y2="360"/>
+          <line x1="320" y1="120" x2="260" y2="330"/>
+          <line x1="60" y1="90" x2="150" y2="270"/>
+        </g>
+        <g stroke="var(--brick)" stroke-width="1.1" stroke-opacity=".3">
+          <line x1="420" y1="200" x2="400" y2="360"/>
+          <line x1="400" y1="360" x2="300" y2="440"/>
+          <line x1="60" y1="90" x2="30" y2="220"/>
+          <line x1="30" y1="220" x2="150" y2="270"/>
+        </g>
+        <g fill="var(--forest)" fill-opacity=".55">
+          <circle cx="60" cy="90" r="5"/>
+          <circle cx="180" cy="150" r="6"/>
+          <circle cx="320" cy="120" r="5"/>
+          <circle cx="150" cy="270" r="6"/>
+          <circle cx="260" cy="330" r="5"/>
+        </g>
+        <g fill="var(--brick)" fill-opacity=".5">
+          <circle cx="420" cy="200" r="5"/>
+          <circle cx="400" cy="360" r="6"/>
+          <circle cx="300" cy="440" r="4"/>
+          <circle cx="30" cy="220" r="4"/>
+        </g>
+      </svg>
       <svg class="seal-large" viewBox="0 0 100 100" fill="none">
         <circle cx="50" cy="50" r="46" fill="var(--forest)" opacity=".08"/>
         <circle cx="50" cy="50" r="34" stroke="var(--forest)" stroke-width="1.2" fill="none"/>
@@ -473,6 +524,10 @@ footer p{margin-bottom:.3rem;}
         <div class="index-card card-c">
           <div class="num" style="font-size:1.15rem;">Renault Group</div>
           <div class="lab" data-i18n="hero.stat3">Current role</div>
+        </div>
+        <div class="index-card card-d">
+          <div class="langs"><span>EN</span><span>ES</span><span>IT</span></div>
+          <div class="lab" data-i18n="hero.stat4">Languages spoken</div>
         </div>
       </div>
     </div>
@@ -510,7 +565,7 @@ footer p{margin-bottom:.3rem;}
         <div class="tcard">
           <div class="card-header">
             <div>
-              <div class="card-title" data-i18n="experience.job1.title">Data Scientist &amp; Software Engineer Intern</div>
+              <div class="card-title" data-i18n="experience.job1.title">Data Scientist &amp; Software Engineer</div>
               <div class="card-company" data-i18n="experience.job1.company">Renault Group — Innovation Department, Palencia, Spain</div>
             </div>
             <div class="card-date" data-i18n="experience.job1.date">Jan 2026 – Present</div>
@@ -719,9 +774,7 @@ footer p{margin-bottom:.3rem;}
         <h3 data-i18n="certs.heading">Certifications &amp; Training</h3>
         <ul>
           <li><strong>Renault Group:</strong> Looker SSBD Training</li>
-          <li><strong>LinkedIn Learning:</strong> Agentic AI · LangChain &amp; Hugging Face · OpenAI &amp; LangChain</li>
-          <li><strong>LinkedIn Learning:</strong> Program Evaluation for Data Science · Advanced NoSQL</li>
-          <li><strong>LinkedIn Learning:</strong> AWS ML Specialty (MLS-C01) Cert Prep</li>
+          <li><strong>LinkedIn Learning:</strong> Agentic AI · LangChain &amp; Hugging Face · OpenAI &amp; LangChain · Program Evaluation for Data Science · Advanced NoSQL · AWS ML Specialty (MLS-C01) Cert Prep</li>
         </ul>
       </div>
       <div class="mini-card">
@@ -750,7 +803,7 @@ const i18n = {
     "hero.subtitle":"Data Scientist &amp; Statistician",
     "hero.tagline":"Turning fragmented business data into production-ready analytics and machine learning solutions.",
     "hero.cta.email":"Email","hero.cta.linkedin":"LinkedIn","hero.cta.github":"GitHub","hero.cta.phone":"Phone",
-    "hero.stat2":"Projects shipped","hero.stat3":"Current role",
+    "hero.stat2":"Projects shipped","hero.stat3":"Current role","hero.stat4":"Languages spoken",
     "actions.downloadCv":"CV","actions.downloadCvFull":"Download CV",
     "about.heading":"About Me",
     "about.p1":"Statistician and Data Scientist with hands-on experience building data-driven solutions for industrial manufacturing at <strong>Renault Group</strong>, and applied research in agricultural risk modelling at <strong>ITACyL</strong>.",
@@ -759,7 +812,7 @@ const i18n = {
     "about.p4":"Particularly interested in NLP, time series, MLOps and modern data architectures. Always learning new tools and applying them to real-world problems.",
     "about.location":"Valladolid, Spain",
     "experience.heading":"Experience",
-    "experience.job1.title":"Data Scientist &amp; Software Engineer Intern",
+    "experience.job1.title":"Data Scientist &amp; Software Engineer",
     "experience.job1.company":"Renault Group — Innovation Department, Palencia, Spain",
     "experience.job1.date":"Jan 2026 – Present",
     "experience.job1.sub1.title":"Absenteeism Analytics &amp; Prediction Platform",
@@ -817,7 +870,7 @@ const i18n = {
     "hero.subtitle":"Científico de Datos y Estadístico",
     "hero.tagline":"Transformando datos fragmentados de negocio en soluciones analíticas y de machine learning listas para producción.",
     "hero.cta.email":"Email","hero.cta.linkedin":"LinkedIn","hero.cta.github":"GitHub","hero.cta.phone":"Teléfono",
-    "hero.stat2":"Proyectos","hero.stat3":"Puesto actual",
+    "hero.stat2":"Proyectos","hero.stat3":"Puesto actual","hero.stat4":"Idiomas hablados",
     "actions.downloadCv":"CV","actions.downloadCvFull":"Descargar CV",
     "about.heading":"Sobre Mí",
     "about.p1":"Estadístico y científico de datos con experiencia práctica en el desarrollo de soluciones basadas en datos para la industria en <strong>Renault Group</strong>, y en investigación aplicada al modelado de riesgo agrícola en <strong>ITACyL</strong>.",
@@ -826,7 +879,7 @@ const i18n = {
     "about.p4":"Especial interés en NLP, series temporales, MLOps y arquitecturas de datos modernas. Siempre aprendiendo nuevas herramientas y aplicándolas a problemas reales.",
     "about.location":"Valladolid, España",
     "experience.heading":"Experiencia",
-    "experience.job1.title":"Data Scientist &amp; Ingeniero de Software (Becario)",
+    "experience.job1.title":"Data Scientist &amp; Ingeniero de Software",
     "experience.job1.company":"Renault Group — Departamento de Innovación, Palencia, España",
     "experience.job1.date":"Ene 2026 – Presente",
     "experience.job1.sub1.title":"Plataforma de Analítica y Predicción de Absentismo",
@@ -884,7 +937,7 @@ const i18n = {
     "hero.subtitle":"Data Scientist e Statistico",
     "hero.tagline":"Trasformo dati aziendali frammentati in soluzioni analitiche e di machine learning pronte per la produzione.",
     "hero.cta.email":"Email","hero.cta.linkedin":"LinkedIn","hero.cta.github":"GitHub","hero.cta.phone":"Telefono",
-    "hero.stat2":"Progetti realizzati","hero.stat3":"Ruolo attuale",
+    "hero.stat2":"Progetti realizzati","hero.stat3":"Ruolo attuale","hero.stat4":"Lingue parlate",
     "actions.downloadCv":"CV","actions.downloadCvFull":"Scarica CV",
     "about.heading":"Chi Sono",
     "about.p1":"Statistico e data scientist con esperienza pratica nello sviluppo di soluzioni data-driven per la produzione industriale presso <strong>Renault Group</strong>, e nella ricerca applicata alla modellazione del rischio agricolo presso <strong>ITACyL</strong>.",
@@ -893,7 +946,7 @@ const i18n = {
     "about.p4":"Particolarmente interessato a NLP, serie temporali, MLOps e architetture dati moderne. Sempre alla ricerca di nuovi strumenti da applicare a problemi reali.",
     "about.location":"Valladolid, Spagna",
     "experience.heading":"Esperienza",
-    "experience.job1.title":"Data Scientist e Ingegnere Software (Stage)",
+    "experience.job1.title":"Data Scientist e Ingegnere Software",
     "experience.job1.company":"Renault Group — Dipartimento Innovazione, Palencia, Spagna",
     "experience.job1.date":"Gen 2026 – Presente",
     "experience.job1.sub1.title":"Piattaforma di Analisi e Previsione dell'Assenteismo",
