@@ -21,8 +21,6 @@
 <meta name="twitter:title" content="Alex Cugnod Segovia — Data Scientist &amp; Statistician">
 <meta name="twitter:description" content="Data Scientist &amp; Statistician — Renault Group, ITACyL.">
 <meta name="twitter:image" content="https://aleex-cs.github.io/og-image.png">
-<<<<<<< HEAD
-=======
 <link rel="alternate" type="application/json" href="resume.json" title="Resume (JSON Resume format)">
 
 <!-- JSON-LD structured data (schema.org Person) -->
@@ -58,7 +56,6 @@
   ]
 }
 </script>
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 
 <!-- Favicon (custom seal, inline SVG) -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Ccircle cx='22' cy='22' r='21' fill='%23F1E7D3' stroke='%2333513B' stroke-width='2'/%3E%3Ccircle cx='22' cy='22' r='16' fill='none' stroke='%23A9813F' stroke-width='1' stroke-dasharray='1.5 3'/%3E%3Ctext x='22' y='29' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='17' fill='%239C3B29'%3EAC%3C/text%3E%3C/svg%3E">
@@ -151,17 +148,12 @@ a{color:inherit;}
 .seal-name{font-family:var(--serif);font-weight:600;font-size:1.02rem;letter-spacing:-.01em;color:var(--ink);}
 .seal-name em{font-style:italic;color:var(--brick);}
 
-<<<<<<< HEAD
 .nav-links{display:flex;align-items:center;gap:.15rem;}
-=======
-.nav-links{display:flex;align-items:center;gap:.15rem;position:relative;}
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 .nav-links a{
   position:relative;
   color:var(--ink-soft); text-decoration:none; font-weight:600; font-size:.86rem;
   padding:.5rem .85rem;
 }
-<<<<<<< HEAD
 .nav-links a::after{
   content:''; position:absolute; left:.85rem; right:.85rem; bottom:.3rem; height:2px;
   background:var(--forest); transform:scaleX(0); transform-origin:left; transition:transform .3s ease;
@@ -170,35 +162,6 @@ a{color:inherit;}
 .nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);}
 .nav-links a.active{color:var(--ink);}
 
-=======
-.nav-links a:hover{color:var(--ink);}
-.nav-links a.active{color:var(--ink);}
-
-.nav-road{
-  position:absolute; left:0; right:0; bottom:.22rem; height:1px;
-  background:repeating-linear-gradient(to right, var(--line) 0 6px, transparent 6px 11px);
-  pointer-events:none;
-}
-.nav-car{
-  position:absolute; bottom:-.06rem; left:0; width:38px; height:18px;
-  transform:translateX(0px); transition:transform .65s cubic-bezier(.5,.08,.16,1);
-  pointer-events:none; z-index:2;
-}
-.nav-car svg{width:100%;height:100%;display:block;filter:drop-shadow(0 2px 1px rgba(43,36,25,.25));}
-
-.nav-bar-indicator{
-  position:absolute; bottom:.3rem; left:0; width:38px; height:2px; border-radius:2px;
-  background:var(--forest); transform:translateX(0px);
-  transition:transform .45s cubic-bezier(.5,.08,.16,1), width .45s cubic-bezier(.5,.08,.16,1);
-  pointer-events:none; z-index:2; display:none;
-}
-
-/* Simple-bar mode: set NAV_INDICATOR = 'bar' in the script below to switch */
-body.nav-style-bar .nav-car,
-body.nav-style-bar .nav-road{ display:none; }
-body.nav-style-bar .nav-bar-indicator{ display:block; }
-
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 .top-actions{display:flex;align-items:center;gap:.6rem;}
 
 .lang-switch{
@@ -340,17 +303,6 @@ h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3vw,2.3rem)
 .location-card .icon-badge svg{width:18px;height:18px;}
 .location-card span{font-weight:600;font-size:.92rem;}
 
-<<<<<<< HEAD
-/* experience */
-.timeline{position:relative;padding-left:2.2rem;}
-.timeline::before{content:'';position:absolute;left:6px;top:.6rem;bottom:.6rem;width:1px;background:var(--line);}
-.timeline-item{position:relative;padding-bottom:2.4rem;}
-.timeline-item:last-child{padding-bottom:0;}
-.timeline-item::before{
-  content:''; position:absolute; left:-2.2rem; top:1.9rem; width:13px; height:13px; border-radius:50%;
-  background:var(--cream); border:2px solid var(--forest); transform:translateX(0);
-}
-=======
 /* journey timeline */
 .journey-grid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:3rem;align-items:start;}
 .journey-rail{position:sticky; top:5.5rem; height:340px;}
@@ -399,7 +351,6 @@ h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3vw,2.3rem)
 
 .timeline{position:relative; display:flex; flex-direction:column; gap:2.2rem;}
 .timeline-item{position:relative;}
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 .tcard{
   background:var(--cream-card); border:1px solid var(--line); border-radius:var(--radius-l); padding:1.9rem;
   box-shadow:var(--shadow-1); transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
@@ -443,8 +394,6 @@ h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3vw,2.3rem)
 .project-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.85rem;}
 .tag{background:var(--forest-tint);color:var(--forest-deep);font-size:.68rem;font-weight:700;padding:.24rem .58rem;border-radius:999px;}
 .project-card p{color:var(--ink-soft); font-size:.89rem; margin-bottom:.7rem;}
-<<<<<<< HEAD
-=======
 
 .project-media{
   border-radius:10px; overflow:hidden; border:1px solid var(--line); margin-bottom:.8rem;
@@ -456,7 +405,6 @@ h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3vw,2.3rem)
   height:150px; color:var(--ink-faint); font-size:.8rem; font-weight:600;
 }
 .project-media-placeholder svg{width:20px;height:20px; flex:none; opacity:.7;}
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 .project-link{
   display:inline-flex; align-items:center; gap:.35rem; font-size:.82rem; font-weight:700;
   color:var(--forest-deep); text-decoration:none; border-bottom:1px solid transparent; transition:.2s ease;
@@ -464,8 +412,6 @@ h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3vw,2.3rem)
 .project-link + .project-link{margin-left:1.1rem;}
 .project-link:hover{border-color:var(--forest-deep);}
 
-<<<<<<< HEAD
-=======
 /* case study toggle */
 .case-toggle{
   display:inline-flex; align-items:center; gap:.4rem; margin-top:.3rem;
@@ -488,7 +434,6 @@ h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3vw,2.3rem)
 .case-block h5 .dot{width:6px;height:6px;border-radius:50%;background:var(--brick); flex:none;}
 .case-block p{color:var(--ink-soft); font-size:.87rem; margin-bottom:0;}
 
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 /* minor projects */
 .minor-heading{
   font-family:var(--serif); font-weight:600; font-size:1.05rem; color:var(--ink-soft);
@@ -517,8 +462,6 @@ h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3vw,2.3rem)
 .mini-card li:last-child{margin-bottom:0;}
 .mini-card li::before{content:'';position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--gold);}
 .mini-card li strong{color:var(--ink);}
-<<<<<<< HEAD
-=======
 .cert-verify{
   display:inline-block; margin-left:.4rem; font-size:.78rem; font-weight:700;
   color:var(--forest-deep); text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap;
@@ -530,7 +473,6 @@ h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3vw,2.3rem)
 .cert-group-label::before{display:none;}
 .mini-card li.cert-sub{padding-left:1.7rem;}
 .mini-card li.cert-sub::before{left:.6rem;}
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 @media (max-width:760px){ .cert-lang-grid{grid-template-columns:1fr;} }
 .skill-category{background:var(--cream-card); border:1px solid var(--line); border-radius:var(--radius-m); padding:1.5rem;}
 .skill-category h3{font-family:var(--serif); font-weight:600; font-size:.98rem; margin-bottom:1rem;}
@@ -542,23 +484,17 @@ h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3vw,2.3rem)
 .skill-tag:hover{border-color:var(--brick); color:var(--brick-deep); background:var(--brick-tint);}
 
 .education-card{background:var(--cream-card); border:1px solid var(--line); border-radius:var(--radius-m); padding:1.7rem; border-left:4px solid var(--gold);}
-<<<<<<< HEAD
-=======
 .tcard--edu{border-left:4px solid var(--gold);}
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 .education-card p{color:var(--ink-soft); margin-bottom:.4rem; font-size:.94rem;}
 .education-card strong{color:var(--forest-deep);}
 
 footer{text-align:center; padding:3.2rem 1rem 3.6rem; color:var(--ink-faint); font-size:.84rem;}
 footer p{margin-bottom:.3rem;}
-<<<<<<< HEAD
-=======
 .footer-links{margin-top:.6rem !important; font-size:.78rem;}
 .footer-links a{color:var(--ink-faint); text-decoration:none; border-bottom:1px solid transparent; transition:color .2s ease, border-color .2s ease;}
 .footer-links a:hover{color:var(--forest-deep); border-color:var(--forest-deep);}
 .footer-links span{margin:0 .5rem; opacity:.6;}
 footer p{margin-bottom:.3rem;}
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 
 /* ============ RESPONSIVE ============ */
 @media (max-width:900px){
@@ -588,8 +524,6 @@ footer p{margin-bottom:.3rem;}
   *{animation-duration:.01ms !important; transition-duration:.01ms !important;}
   .reveal{opacity:1;transform:none;}
 }
-<<<<<<< HEAD
-=======
 
 /* ============ PRINT ============ */
 @media print{
@@ -597,7 +531,7 @@ footer p{margin-bottom:.3rem;}
   *{ animation:none !important; transition:none !important; box-shadow:none !important; }
   body{ background:#fff !important; color:#000 !important; }
   .paper, .ledger-rules, .hero-bg-art, .seal-large, .tilt-stage .index-card,
-  .topbar, .burger, .mobile-menu, .lang-switch, .cv-download, .nav-road, .nav-car,
+  .topbar, .burger, .mobile-menu, .lang-switch, .cv-download,
   .case-toggle, footer{ display:none !important; }
   header{ padding:0 0 1rem; }
   .hero-grid{ grid-template-columns:1fr; }
@@ -620,7 +554,6 @@ footer p{margin-bottom:.3rem;}
   .reveal{ opacity:1 !important; transform:none !important; }
   .wrap{ width:100%; }
 }
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 </style>
 </head>
 <body>
@@ -643,34 +576,6 @@ footer p{margin-bottom:.3rem;}
       <a href="#proyectos" data-i18n="nav.projects">Projects</a>
       <a href="#habilidades" data-i18n="nav.skills">Skills</a>
       <a href="#formacion" data-i18n="nav.education">Education</a>
-<<<<<<< HEAD
-=======
-      <div class="nav-road"></div>
-      <div class="nav-car" id="navCar" aria-hidden="true">
-        <svg viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg">
-          <g fill="#2B2419">
-            <path d="M8,64 L8,54 Q8,47 17,46 L33,44 Q41,27 59,25 L94,25 Q104,25 110,33 L124,35 Q142,36 152,40 L160,41 Q170,33 178,32 L184,33 Q180,40 174,43 L188,45 Q193,46 193,52 L193,58 Q193,63 188,63 Z"/>
-          </g>
-          <g fill="#F1E7D3">
-            <path d="M45,44 Q51,30 60,28 L86,28 Q91,28 93,33 L94,44 Z"/>
-          </g>
-          <g fill="#2B2419">
-            <rect x="3" y="57" width="9" height="4" rx="1.5"/>
-            <rect x="189" y="55" width="7" height="4" rx="1.5"/>
-          </g>
-          <g fill="#9C3B29">
-            <rect x="20" y="51" width="150" height="2.2" rx="1.1"/>
-          </g>
-          <g>
-            <circle cx="42" cy="65" r="12" fill="#2B2419"/>
-            <circle cx="42" cy="65" r="5.5" fill="#A9813F"/>
-            <circle cx="158" cy="65" r="12" fill="#2B2419"/>
-            <circle cx="158" cy="65" r="5.5" fill="#A9813F"/>
-          </g>
-        </svg>
-      </div>
-      <div class="nav-bar-indicator" id="navBarIndicator" aria-hidden="true"></div>
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     </nav>
     <div class="top-actions">
       <a class="cv-download" id="cvDownloadDesktop" href="Alex_Cugnod_CV_EN.pdf" download>
@@ -729,36 +634,6 @@ footer p{margin-bottom:.3rem;}
 
     <div class="hero-panel">
       <svg class="hero-bg-art" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-<<<<<<< HEAD
-        <g stroke="var(--forest)" stroke-width="1.1" stroke-opacity=".35">
-          <line x1="60" y1="90" x2="180" y2="150"/>
-          <line x1="180" y1="150" x2="150" y2="270"/>
-          <line x1="180" y1="150" x2="320" y2="120"/>
-          <line x1="320" y1="120" x2="420" y2="200"/>
-          <line x1="150" y1="270" x2="260" y2="330"/>
-          <line x1="260" y1="330" x2="400" y2="360"/>
-          <line x1="320" y1="120" x2="260" y2="330"/>
-          <line x1="60" y1="90" x2="150" y2="270"/>
-        </g>
-        <g stroke="var(--brick)" stroke-width="1.1" stroke-opacity=".3">
-          <line x1="420" y1="200" x2="400" y2="360"/>
-          <line x1="400" y1="360" x2="300" y2="440"/>
-          <line x1="60" y1="90" x2="30" y2="220"/>
-          <line x1="30" y1="220" x2="150" y2="270"/>
-        </g>
-        <g fill="var(--forest)" fill-opacity=".55">
-          <circle cx="60" cy="90" r="5"/>
-          <circle cx="180" cy="150" r="6"/>
-          <circle cx="320" cy="120" r="5"/>
-          <circle cx="150" cy="270" r="6"/>
-          <circle cx="260" cy="330" r="5"/>
-        </g>
-        <g fill="var(--brick)" fill-opacity=".5">
-          <circle cx="420" cy="200" r="5"/>
-          <circle cx="400" cy="360" r="6"/>
-          <circle cx="300" cy="440" r="4"/>
-          <circle cx="30" cy="220" r="4"/>
-=======
         <g stroke="var(--forest)" stroke-opacity=".28">
           <circle cx="360" cy="80" r="70" stroke-width="1" stroke-dasharray="2 6"/>
           <circle cx="360" cy="80" r="105" stroke-width="1" stroke-dasharray="1 8"/>
@@ -779,7 +654,6 @@ footer p{margin-bottom:.3rem;}
         <g stroke="var(--gold)" stroke-opacity=".4" stroke-width="1">
           <path d="M40 460 q 20 -14 40 0 t 40 0" fill="none"/>
           <path d="M400 440 q 18 -12 36 0 t 36 0" fill="none"/>
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
         </g>
       </svg>
       <svg class="seal-large" viewBox="0 0 100 100" fill="none">
@@ -830,52 +704,6 @@ footer p{margin-bottom:.3rem;}
   <section id="experiencia" class="reveal">
     <div class="section-header">
       <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
-<<<<<<< HEAD
-      <div><h2 data-i18n="experience.heading">Experience</h2></div>
-    </div>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="tcard">
-          <div class="card-header">
-            <div>
-              <div class="card-title" data-i18n="experience.job1.title">Data Scientist &amp; Software Engineer</div>
-              <div class="card-company" data-i18n="experience.job1.company">Renault Group — Innovation Department, Palencia, Spain</div>
-            </div>
-            <div class="card-date" data-i18n="experience.job1.date">Jan 2026 – Present</div>
-          </div>
-          <div class="job-subhead" data-i18n="experience.job1.sub1.title">Absenteeism Analytics &amp; Prediction Platform</div>
-          <ul>
-            <li data-i18n="experience.job1.sub1.li1">Built an end-to-end analytics platform (React, FastAPI, Python, Looker) integrating 3M+ person-day records across 99 variables and growing.</li>
-            <li data-i18n="experience.job1.sub1.li2">Replaced fragmented Excel/legacy workflows with 10+ interactive modules covering factory, department, workshop, UET and employee-level analysis.</li>
-            <li data-i18n="experience.job1.sub1.li3">Implemented authentication, role-based access control, employee management and automated reporting across the full stack.</li>
-            <li data-i18n="experience.job1.sub1.li4">Built interactive Plotly dashboards for absenteeism evolution, organisational breakdowns and recurrence analysis.</li>
-            <li data-i18n="experience.job1.sub1.li5"><strong>AI assistant:</strong> integrated a natural-language assistant that queries absenteeism data within a user's organisational scope, returning tables, charts and employee-level results.</li>
-            <li data-i18n="experience.job1.sub1.li6"><strong>Forecasting:</strong> built experimental models (Elastic Net, Random Forest, SARIMAX) with a walk-forward validation framework designed from scratch to avoid temporal data leakage.</li>
-          </ul>
-          <div class="job-subhead" data-i18n="experience.job1.sub2.title">Production Analytics &amp; Optimisation</div>
-          <ul>
-            <li data-i18n="experience.job1.sub2.li1">Maintained and optimised <em>Docuzilla</em> (Python/DuckDB), a tool used daily by Renault engineers, cutting execution time to under 10% of the original runtime.</li>
-            <li data-i18n="experience.job1.sub2.li2">Developed an experimental next-day factory gas-consumption forecasting model using historical consumption, production and weather data.</li>
-            <li data-i18n="experience.job1.sub2.li3">Designed a PostgreSQL database for quality-management dossiers, including schema, relationships, indexes and views.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="tcard">
-          <div class="card-header">
-            <div>
-              <div class="card-title" data-i18n="experience.job2.title">Data Scientist / Analyst</div>
-              <div class="card-company" data-i18n="experience.job2.company">ITACyL — Agricultural Technological Institute</div>
-            </div>
-            <div class="card-date" data-i18n="experience.job2.date">Apr 2025 – Jul 2025</div>
-          </div>
-          <ul>
-            <li data-i18n="experience.job2.li1">Built the institute's first predictive modelling approach for common vole population dynamics using historical regional data through 2024.</li>
-            <li data-i18n="experience.job2.li2">Built statistical and ML models in R and Python with spatial and temporal validation, reducing 145 candidate variables to 12 key predictors.</li>
-            <li data-i18n="experience.job2.li3">Achieved R² = 0.75 in geographic validation and over 95% accuracy in forecasting population trend direction.</li>
-            <li data-i18n="experience.job2.li4">Identified demographic cycles ranging from approximately 2 to 7 years.</li>
-          </ul>
-=======
       <div><h2 data-i18n="experience.heading">Experience &amp; Education</h2></div>
     </div>
     <div class="journey-grid">
@@ -1011,7 +839,6 @@ footer p{margin-bottom:.3rem;}
               </div>
             </div>
           </div>
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
         </div>
       </div>
     </div>
@@ -1027,9 +854,6 @@ footer p{margin-bottom:.3rem;}
         <div class="project-title-row"><div class="project-title">SignalDesk</div></div>
         <div class="project-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Finance</span><span class="tag">Machine Learning</span></div>
         <p data-i18n="projects.signaldesk.desc">Research tool for prioritising insider-trading filings, combining SEC Form 4 data, market context and anomaly detection into quantitative BUY/SELL/HOLD/IGNORE signals with confidence scores — plus a public transparency track record benchmarked against the S&amp;P 500.</p>
-<<<<<<< HEAD
-        <a class="project-link" href="https://signaldesk-q9n7.onrender.com/" target="_blank" rel="noopener" data-i18n="projects.viewDemo">View live demo ↗</a>
-=======
         <div class="project-media">
           <img src="demo_signaldesk.gif" alt="SignalDesk demo" loading="lazy"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -1090,7 +914,6 @@ footer p{margin-bottom:.3rem;}
             <p data-i18n="case.earnings.p3">The FastAPI + Plotly dashboard ships with precomputed analyses for AAPL, GOOGL, MSFT, NVDA and TSLA, so sentiment, uncertainty, topic shifts and next-session returns are explorable immediately — locally or on the public demo.</p>
           </div>
         </div>
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
       </div>
       <div class="project-card">
         <div class="project-title-row"><div class="project-title">MusicStats</div></div>
@@ -1100,14 +923,6 @@ footer p{margin-bottom:.3rem;}
         <a class="project-link" href="https://github.com/aleex-cs/music_stats" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub ↗</a>
       </div>
       <div class="project-card">
-<<<<<<< HEAD
-        <div class="project-title-row"><div class="project-title" data-i18n="projects.earnings.title">Earnings Calls NLP Pipeline</div><span class="wip-badge">WIP</span></div>
-        <div class="project-tags"><span class="tag">PyTorch</span><span class="tag">FinBERT</span><span class="tag">NLP</span><span class="tag">Streamlit</span></div>
-        <p data-i18n="projects.earnings.desc">NLP pipeline that analyses earnings-call transcripts with FinBERT to detect sentiment, executive uncertainty and gaps between prepared remarks and Q&amp;A, combined with real market data from Yahoo Finance in an interactive dashboard.</p>
-      </div>
-      <div class="project-card">
-=======
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
         <div class="project-title-row"><div class="project-title">DataPipe</div><span class="wip-badge">WIP</span></div>
         <div class="project-tags"><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">D3.js</span><span class="tag">Static Analysis</span></div>
         <p data-i18n="projects.datapipe.desc">Code analysis and visualisation tool that turns a zipped Python project into an interactive graph of its data flow, showing every read, transformation and processing step from source to output.</p>
@@ -1230,23 +1045,7 @@ footer p{margin-bottom:.3rem;}
   <section id="formacion" class="reveal">
     <div class="section-header">
       <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></div>
-<<<<<<< HEAD
-      <div><h2 data-i18n="education.heading">Education &amp; Credentials</h2></div>
-    </div>
-
-    <div class="education-card">
-      <div class="card-header">
-        <div>
-          <div class="card-title" data-i18n="education.title">BSc in Statistics</div>
-          <div class="card-company" data-i18n="education.institution">University of Valladolid (UVa)</div>
-        </div>
-        <div class="card-date" data-i18n="education.date">Sep 2021 – Jul 2025</div>
-      </div>
-      <p><span data-i18n="education.tfgLabel">Thesis grade</span>: <strong>9.8 / 10</strong></p>
-      <p><span data-i18n="education.tfgTitleLabel">Thesis</span>: <em data-i18n="education.tfgTitle">"Predictive Models for Common Vole Population Fluctuations and Agricultural Crop Risk"</em> — <span data-i18n="education.tfgNote">early-warning modelling using time-series analysis.</span></p>
-=======
       <div><h2 data-i18n="education.heading">Certifications &amp; Languages</h2></div>
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     </div>
 
     <div class="cert-lang-grid">
@@ -1254,9 +1053,6 @@ footer p{margin-bottom:.3rem;}
         <h3 data-i18n="certs.heading">Certifications &amp; Training</h3>
         <ul>
           <li><strong>Renault Group:</strong> Looker SSBD Training</li>
-<<<<<<< HEAD
-          <li><strong>LinkedIn Learning:</strong> Agentic AI · LangChain &amp; Hugging Face · OpenAI &amp; LangChain · Program Evaluation for Data Science · Advanced NoSQL · AWS ML Specialty (MLS-C01) Cert Prep</li>
-=======
           <li class="cert-group-label">LinkedIn Learning</li>
           <li class="cert-sub">Agentic AI: Building Data-First AI Agents <a class="cert-verify" href="https://www.linkedin.com/learning/certificates/2b9aa83b226385c3b98be14f3d1f709c41ba341da7576b73d2c45252afe4388f" target="_blank" rel="noopener" data-i18n="certs.verify">Verify ↗</a></li>
           <li class="cert-sub">Build with AI: Autonomous Agents with LangChain and Hugging Face <a class="cert-verify" href="https://www.linkedin.com/learning/certificates/08f4a6c5994d211d9ed641870e6ef263fa5ce743c299e3a916ccd00ca31f6ab2" target="_blank" rel="noopener" data-i18n="certs.verify">Verify ↗</a></li>
@@ -1264,7 +1060,6 @@ footer p{margin-bottom:.3rem;}
           <li class="cert-sub">Program Evaluation for Data Science <a class="cert-verify" href="https://www.linkedin.com/learning/certificates/308e4f684573e60adc641f576f9d6640e25de20a0b2cf4c1c25c62671a5c8b8b" target="_blank" rel="noopener" data-i18n="certs.verify">Verify ↗</a></li>
           <li class="cert-sub">Advanced NoSQL for Data Science <a class="cert-verify" href="https://www.linkedin.com/learning/certificates/9b2c5bcb25de3952842363b87d5f2b2396f9123955e2969742671da3a38d4220" target="_blank" rel="noopener" data-i18n="certs.verify">Verify ↗</a></li>
           <li class="cert-sub">AWS Certified Machine Learning - Specialty (MLS-C01) Cert Prep <a class="cert-verify" href="https://www.linkedin.com/learning/certificates/c6980b87f040dd6cce36d2004715f9fae47e43a742152da339a9abcda7a7b52f" target="_blank" rel="noopener" data-i18n="certs.verify">Verify ↗</a></li>
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
         </ul>
       </div>
       <div class="mini-card">
@@ -1278,24 +1073,12 @@ footer p{margin-bottom:.3rem;}
     </div>
   </section>
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 </main>
 
 <footer>
   <p>© 2026 Alex Cugnod Segovia</p>
-<<<<<<< HEAD
-</footer>
-
-<script>
-/* ============ i18n ============ */
-const i18n = {
-  en: {
-    "nav.about":"About","nav.experience":"Experience","nav.projects":"Projects","nav.skills":"Skills","nav.education":"Education",
-=======
   <p class="footer-links">
     <a id="footerTxtLink" href="Alex_Cugnod_CV_EN.txt" data-i18n="footer.txtCv">Plain-text CV</a>
     <span aria-hidden="true">·</span>
@@ -1304,13 +1087,6 @@ const i18n = {
 </footer>
 
 <script>
-/* ============================================================
-   NAV INDICATOR SWITCH
-   'car'  -> vintage car drives along the nav as you scroll
-   'bar'  -> simple sliding underline instead (no car)
-   ============================================================ */
-const NAV_INDICATOR = 'bar'; // change to 'car' to bring back the vintage car indicator
-
 /* ============ Plausible custom events ============ */
 function trackEvent(name, props){
   if(typeof window.plausible === 'function'){
@@ -1322,44 +1098,24 @@ function trackEvent(name, props){
 const i18n = {
   en: {
     "nav.about":"About","nav.experience":"Experience","nav.projects":"Projects","nav.skills":"Skills","nav.education":"Credentials",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "hero.badge":"Open to new opportunities",
     "hero.subtitle":"Data Scientist &amp; Statistician",
     "hero.tagline":"Turning fragmented business data into production-ready analytics and machine learning solutions.",
     "hero.cta.email":"Email","hero.cta.linkedin":"LinkedIn","hero.cta.github":"GitHub","hero.cta.phone":"Phone",
     "hero.stat2":"Projects shipped","hero.stat3":"Current role","hero.stat4":"Languages spoken",
     "actions.downloadCv":"CV","actions.downloadCvFull":"Download CV",
-<<<<<<< HEAD
-=======
     "footer.txtCv":"Plain-text CV","footer.jsonResume":"resume.json",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "about.heading":"About Me",
     "about.p1":"Statistician and Data Scientist with hands-on experience building data-driven solutions for industrial manufacturing at <strong>Renault Group</strong>, and applied research in agricultural risk modelling at <strong>ITACyL</strong>.",
     "about.p2":"Strong background in statistical modelling, machine learning, predictive analytics and data visualisation, with end-to-end experience turning fragmented business data into practical, production-ready analytical applications.",
     "about.p3":"Experienced in Python, statistical modelling, time series and Streamlit, with a strong focus on solving open-ended problems independently — from data ingestion and modelling to deployment and monitoring.",
     "about.p4":"Particularly interested in NLP, time series, MLOps and modern data architectures. Always learning new tools and applying them to real-world problems.",
     "about.location":"Valladolid, Spain",
-<<<<<<< HEAD
-    "experience.heading":"Experience",
-=======
     "experience.heading":"Experience &amp; Education",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "experience.job1.title":"Data Scientist &amp; Software Engineer",
     "experience.job1.company":"Renault Group — Innovation Department, Palencia, Spain",
     "experience.job1.date":"Jan 2026 – Present",
     "experience.job1.sub1.title":"Absenteeism Analytics &amp; Prediction Platform",
-<<<<<<< HEAD
-    "experience.job1.sub1.li1":"Built an end-to-end analytics platform (React, FastAPI, Python, Looker) integrating 3M+ person-day records across 99 variables and growing.",
-    "experience.job1.sub1.li2":"Replaced fragmented Excel/legacy workflows with 10+ interactive modules covering factory, department, workshop, UET and employee-level analysis.",
-    "experience.job1.sub1.li3":"Implemented authentication, role-based access control, employee management and automated reporting across the full stack.",
-    "experience.job1.sub1.li4":"Built interactive Plotly dashboards for absenteeism evolution, organisational breakdowns and recurrence analysis.",
-    "experience.job1.sub1.li5":"<strong>AI assistant:</strong> integrated a natural-language assistant that queries absenteeism data within a user's organisational scope, returning tables, charts and employee-level results.",
-    "experience.job1.sub1.li6":"<strong>Forecasting:</strong> built experimental models (Elastic Net, Random Forest, SARIMAX) with a walk-forward validation framework designed from scratch to avoid temporal data leakage.",
-    "experience.job1.sub2.title":"Production Analytics &amp; Optimisation",
-    "experience.job1.sub2.li1":"Maintained and optimised <em>Docuzilla</em> (Python/DuckDB), a tool used daily by Renault engineers, cutting execution time to under 10% of the original runtime.",
-    "experience.job1.sub2.li2":"Developed an experimental next-day factory gas-consumption forecasting model using historical consumption, production and weather data.",
-    "experience.job1.sub2.li3":"Designed a PostgreSQL database for quality-management dossiers, including schema, relationships, indexes and views.",
-=======
     "experience.job1.sub1.li1":"Built an end-to-end absenteeism analytics platform integrating React, FastAPI, Python, Looker, local datasets and web/JSON sources, working with 3M+ person-day records across 99 variables and growing.",
     "experience.job1.sub1.li2":"Developed the application architecture from data processing and API services to an interactive React frontend, replacing fragmented Excel/legacy-tool workflows with a centralized analytical platform.",
     "experience.job1.sub1.li3":"Built 10+ functional modules covering factory, department, workshop, UET and employee-level analysis, with cascading filters and interactive data exploration.",
@@ -1374,7 +1130,6 @@ const i18n = {
     "experience.job1.sub2.li2":"Optimized core processing logic, reducing execution time to less than 10% of the original runtime, while developing new features and algorithmic improvements.",
     "experience.job1.sub2.li3":"Developed an experimental next-day factory gas-consumption forecasting model using historical consumption, production and weather data.",
     "experience.job1.sub2.li4":"Designed a PostgreSQL database for quality-management dossiers, including schema, relationships, constraints, indexes and views.",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "experience.job2.title":"Data Scientist / Analyst",
     "experience.job2.company":"ITACyL — Agricultural Technological Institute",
     "experience.job2.date":"Apr 2025 – Jul 2025",
@@ -1383,12 +1138,6 @@ const i18n = {
     "experience.job2.li3":"Achieved R² = 0.75 in geographic validation and over 95% accuracy in forecasting population trend direction.",
     "experience.job2.li4":"Identified demographic cycles ranging from approximately 2 to 7 years.",
     "projects.heading":"Projects",
-<<<<<<< HEAD
-    "projects.viewDemo":"View live demo ↗",
-    "projects.signaldesk.desc":"Research tool for prioritising insider-trading filings, combining SEC Form 4 data, market context and anomaly detection into quantitative BUY/SELL/HOLD/IGNORE signals with confidence scores — plus a public transparency track record benchmarked against the S&amp;P 500.",
-    "projects.earnings.title":"Earnings Calls NLP Pipeline",
-    "projects.earnings.desc":"NLP pipeline that analyses earnings-call transcripts with FinBERT to detect sentiment, executive uncertainty and gaps between prepared remarks and Q&amp;A, combined with real market data from Yahoo Finance in an interactive dashboard.",
-=======
     "projects.viewDemo":"View live demo ↗","projects.mediaSoon":"Demo preview coming soon",
     "projects.signaldesk.desc":"Research tool for prioritising insider-trading filings, combining SEC Form 4 data, market context and anomaly detection into quantitative BUY/SELL/HOLD/IGNORE signals with confidence scores — plus a public transparency track record benchmarked against the S&amp;P 500.",
     "case.readMore":"Read case study","case.hide":"Hide case study",
@@ -1414,7 +1163,6 @@ const i18n = {
     "case.earnings.p1":"Earnings press releases land as long, boilerplate-heavy 8-K filings. Tone, hedge language and how they shifted versus last quarter are hard to compare across issuers — and harder still to line up with the next-session stock move.",
     "case.earnings.p2":"Built a pipeline that pulls Exhibit 99.1 from SEC EDGAR, strips boilerplate, chunks the narrative and scores sentiment with FinBERT, while measuring uncertainty with independent lexicons. It builds per-issuer timelines, anomaly alerts versus each company's own history, a compare view on a shared window, and joins every filing date to Yahoo Finance prices: the close after the 8-K versus the last close on or before it, plus excess return versus SPY.",
     "case.earnings.p3":"The FastAPI + Plotly dashboard ships with precomputed analyses for AAPL, GOOGL, MSFT, NVDA and TSLA, so sentiment, uncertainty, topic shifts and next-session returns are explorable immediately — locally or on the public demo.",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "projects.datapipe.desc":"Code analysis and visualisation tool that turns a zipped Python project into an interactive graph of its data flow, showing every read, transformation and processing step from source to output.",
     "projects.stylometry.title":"Literary Character Stylometry",
     "projects.stylometry.desc":"NLP/LLM pipeline that compares literary characters across books to find psychological and narrative similarities, using a local LLM for profile generation and multilingual embeddings for similarity scoring.",
@@ -1433,18 +1181,6 @@ const i18n = {
     "skills.cat1":"Programming","skills.cat2":"Data Science &amp; Statistics","skills.cat3":"Data &amp; Visualization","skills.cat4":"Web &amp; APIs","skills.cat5":"Databases &amp; Tools","skills.cat6":"Other",
     "skills.timeseries":"Time Series",
     "education.title":"BSc in Statistics","education.institution":"University of Valladolid (UVa)","education.date":"Sep 2021 – Jul 2025",
-<<<<<<< HEAD
-    "education.heading":"Education &amp; Credentials",
-    "education.tfgLabel":"Thesis grade","education.tfgTitleLabel":"Thesis",
-    "education.tfgTitle":"\u201cPredictive Models for Common Vole Population Fluctuations and Agricultural Crop Risk\u201d",
-    "education.tfgNote":"early-warning modelling using time-series analysis.",
-    "certs.heading":"Certifications &amp; Training",
-    "langs.heading":"Languages","langs.spanish":"Spanish","langs.english":"English","langs.italian":"Italian",
-    "langs.native":"Native","langs.fullpro":"Full Professional Proficiency","langs.upperint":"Upper-Intermediate / Advanced"
-  },
-  es: {
-    "nav.about":"Sobre mí","nav.experience":"Experiencia","nav.projects":"Proyectos","nav.skills":"Habilidades","nav.education":"Formación",
-=======
     "education.heading":"Certifications &amp; Languages",
     "education.tfgLabel":"Thesis grade","education.tfgTitleLabel":"Thesis",
     "education.tfgTitle":"\u201cPredictive Models for Common Vole Population Fluctuations and Agricultural Crop Risk\u201d",
@@ -1455,44 +1191,24 @@ const i18n = {
   },
   es: {
     "nav.about":"Sobre mí","nav.experience":"Experiencia","nav.projects":"Proyectos","nav.skills":"Habilidades","nav.education":"Credenciales",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "hero.badge":"Disponible para nuevos retos",
     "hero.subtitle":"Científico de Datos y Estadístico",
     "hero.tagline":"Transformando datos fragmentados de negocio en soluciones analíticas y de machine learning listas para producción.",
     "hero.cta.email":"Email","hero.cta.linkedin":"LinkedIn","hero.cta.github":"GitHub","hero.cta.phone":"Teléfono",
     "hero.stat2":"Proyectos","hero.stat3":"Puesto actual","hero.stat4":"Idiomas hablados",
     "actions.downloadCv":"CV","actions.downloadCvFull":"Descargar CV",
-<<<<<<< HEAD
-=======
     "footer.txtCv":"CV en texto plano","footer.jsonResume":"resume.json",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "about.heading":"Sobre Mí",
     "about.p1":"Estadístico y científico de datos con experiencia práctica en el desarrollo de soluciones basadas en datos para la industria en <strong>Renault Group</strong>, y en investigación aplicada al modelado de riesgo agrícola en <strong>ITACyL</strong>.",
     "about.p2":"Sólida base en modelado estadístico, machine learning, analítica predictiva y visualización de datos, con experiencia integral transformando datos fragmentados de negocio en aplicaciones analíticas prácticas y listas para producción.",
     "about.p3":"Experiencia en Python, modelado estadístico, series temporales y Streamlit, con un enfoque marcado en resolver problemas abiertos de forma independiente: desde la ingesta y el modelado hasta el despliegue y la monitorización.",
     "about.p4":"Especial interés en NLP, series temporales, MLOps y arquitecturas de datos modernas. Siempre aprendiendo nuevas herramientas y aplicándolas a problemas reales.",
     "about.location":"Valladolid, España",
-<<<<<<< HEAD
-    "experience.heading":"Experiencia",
-=======
     "experience.heading":"Experiencia y Formación",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "experience.job1.title":"Data Scientist &amp; Ingeniero de Software",
     "experience.job1.company":"Renault Group — Departamento de Innovación, Palencia, España",
     "experience.job1.date":"Ene 2026 – Presente",
     "experience.job1.sub1.title":"Plataforma de Analítica y Predicción de Absentismo",
-<<<<<<< HEAD
-    "experience.job1.sub1.li1":"Desarrollo end-to-end de una plataforma analítica (React, FastAPI, Python, Looker) que integra más de 3M de registros persona-día en 99 variables y creciendo.",
-    "experience.job1.sub1.li2":"Sustitución de flujos fragmentados en Excel/herramientas legacy por más de 10 módulos interactivos a nivel de fábrica, departamento, taller, UET y empleado.",
-    "experience.job1.sub1.li3":"Implementación de autenticación, control de acceso por roles, gestión de empleados e informes automatizados en toda la aplicación.",
-    "experience.job1.sub1.li4":"Desarrollo de dashboards interactivos con Plotly para la evolución del absentismo, desgloses organizativos y análisis de recurrencia.",
-    "experience.job1.sub1.li5":"<strong>Asistente de IA:</strong> integración de un asistente en lenguaje natural que consulta los datos de absentismo dentro del ámbito organizativo del usuario, devolviendo tablas, gráficos y resultados a nivel de empleado.",
-    "experience.job1.sub1.li6":"<strong>Predicción:</strong> creación de modelos experimentales (Elastic Net, Random Forest, SARIMAX) con un framework de validación walk-forward diseñado desde cero para evitar fugas temporales de datos.",
-    "experience.job1.sub2.title":"Analítica de Producción y Optimización",
-    "experience.job1.sub2.li1":"Mantenimiento y optimización de <em>Docuzilla</em> (Python/DuckDB), herramienta de uso diario para ingenieros de Renault, reduciendo el tiempo de ejecución a menos del 10% del original.",
-    "experience.job1.sub2.li2":"Desarrollo de un modelo experimental de previsión de consumo de gas de la fábrica a día siguiente, usando datos históricos de consumo, producción y meteorología.",
-    "experience.job1.sub2.li3":"Diseño de una base de datos PostgreSQL para expedientes de gestión de calidad, incluyendo esquema, relaciones, índices y vistas.",
-=======
     "experience.job1.sub1.li1":"Desarrollo end-to-end de una plataforma analítica de absentismo integrando React, FastAPI, Python, Looker, datasets locales y fuentes web/JSON, trabajando con más de 3M de registros persona-día en 99 variables y creciendo.",
     "experience.job1.sub1.li2":"Desarrollo de la arquitectura de la aplicación, desde el procesamiento de datos y los servicios API hasta un frontend interactivo en React, sustituyendo flujos fragmentados en Excel/herramientas legacy por una plataforma analítica centralizada.",
     "experience.job1.sub1.li3":"Desarrollo de más de 10 módulos funcionales que cubren análisis a nivel de fábrica, departamento, taller, UET y empleado, con filtros en cascada y exploración interactiva de datos.",
@@ -1507,7 +1223,6 @@ const i18n = {
     "experience.job1.sub2.li2":"Optimización de la lógica de procesamiento principal, reduciendo el tiempo de ejecución a menos del 10% del original, mientras se desarrollaban nuevas funcionalidades y mejoras algorítmicas.",
     "experience.job1.sub2.li3":"Desarrollo de un modelo experimental de previsión del consumo de gas de la fábrica a día siguiente, usando datos históricos de consumo, producción y meteorología.",
     "experience.job1.sub2.li4":"Diseño de una base de datos PostgreSQL para expedientes de gestión de calidad, incluyendo esquema, relaciones, restricciones, índices y vistas.",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "experience.job2.title":"Data Scientist / Analista",
     "experience.job2.company":"ITACyL — Instituto Tecnológico Agrario de Castilla y León",
     "experience.job2.date":"Abr 2025 – Jul 2025",
@@ -1516,12 +1231,6 @@ const i18n = {
     "experience.job2.li3":"Logro de un R² = 0,75 en validación geográfica y más del 95% de precisión al predecir la dirección de la tendencia poblacional.",
     "experience.job2.li4":"Identificación de ciclos demográficos de entre 2 y 7 años aproximadamente.",
     "projects.heading":"Proyectos",
-<<<<<<< HEAD
-    "projects.viewDemo":"Ver demo en vivo ↗",
-    "projects.signaldesk.desc":"Herramienta de investigación para priorizar operaciones de insider trading, combinando datos del Formulario 4 de la SEC, contexto de mercado y detección de anomalías en señales cuantitativas BUY/SELL/HOLD/IGNORE con nivel de confianza, además de un histórico público de resultados frente al S&amp;P 500.",
-    "projects.earnings.title":"Pipeline de NLP para Earnings Calls",
-    "projects.earnings.desc":"Pipeline de NLP que analiza transcripciones de earnings calls con FinBERT para detectar sentimiento, incertidumbre ejecutiva y diferencias entre el discurso preparado y el turno de preguntas, combinado con datos reales de mercado de Yahoo Finance en un dashboard interactivo.",
-=======
     "projects.viewDemo":"Ver demo en vivo ↗","projects.mediaSoon":"Vista previa de la demo próximamente",
     "projects.signaldesk.desc":"Herramienta de investigación para priorizar operaciones de insider trading, combinando datos del Formulario 4 de la SEC, contexto de mercado y detección de anomalías en señales cuantitativas BUY/SELL/HOLD/IGNORE con nivel de confianza, además de un histórico público de resultados frente al S&amp;P 500.",
     "case.readMore":"Ver caso de estudio","case.hide":"Ocultar caso de estudio",
@@ -1547,7 +1256,6 @@ const i18n = {
     "case.earnings.p1":"Los comunicados de resultados llegan como 8-K largos y llenos de boilerplate. El tono, el lenguaje evasivo y cómo han cambiado respecto al trimestre anterior son difíciles de comparar entre emisores, y más aún de alinear con el movimiento de la acción en la siguiente sesión.",
     "case.earnings.p2":"Desarrollé un pipeline que descarga el Exhibit 99.1 de SEC EDGAR, limpia el boilerplate, trocea la narrativa y puntúa el sentimiento con FinBERT, midiendo la incertidumbre con lexicons independientes del modelo. Construye líneas temporales por emisor, alertas frente al histórico de cada compañía, una vista de comparación en una ventana común, y une cada fecha de filing a precios de Yahoo Finance: el cierre posterior al 8-K frente al último cierre en o antes de esa fecha, más el exceso frente al SPY.",
     "case.earnings.p3":"El dashboard en FastAPI + Plotly incluye análisis precomputados de AAPL, GOOGL, MSFT, NVDA y TSLA, de modo que el sentimiento, la incertidumbre, los cambios temáticos y las rentabilidades de la siguiente sesión se pueden explorar de inmediato, en local o en la demo pública.",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "projects.datapipe.desc":"Herramienta de análisis y visualización de código que convierte un proyecto Python comprimido en ZIP en un grafo interactivo de su flujo de datos, mostrando cada lectura, transformación y paso de procesamiento desde el origen hasta el resultado final.",
     "projects.stylometry.title":"Estilometría de Personajes Literarios",
     "projects.stylometry.desc":"Pipeline de NLP/LLM que compara personajes de distintas obras literarias para encontrar similitudes psicológicas y narrativas, usando un LLM local para generar perfiles y embeddings multilingües para calcular similitud.",
@@ -1566,18 +1274,6 @@ const i18n = {
     "skills.cat1":"Programación","skills.cat2":"Ciencia de Datos y Estadística","skills.cat3":"Datos y Visualización","skills.cat4":"Web y APIs","skills.cat5":"Bases de Datos y Herramientas","skills.cat6":"Otros",
     "skills.timeseries":"Series Temporales",
     "education.title":"Grado en Estadística","education.institution":"Universidad de Valladolid (UVa)","education.date":"Sep 2021 – Jul 2025",
-<<<<<<< HEAD
-    "education.heading":"Formación y Credenciales",
-    "education.tfgLabel":"Nota del TFG","education.tfgTitleLabel":"TFG",
-    "education.tfgTitle":"\u201cModelos predictivos para las fluctuaciones de población del topillo campesino y riesgo en cultivos agrícolas\u201d",
-    "education.tfgNote":"modelado de alerta temprana mediante análisis de series temporales.",
-    "certs.heading":"Certificaciones y Formación",
-    "langs.heading":"Idiomas","langs.spanish":"Español","langs.english":"Inglés","langs.italian":"Italiano",
-    "langs.native":"Nativo","langs.fullpro":"Dominio Profesional Completo","langs.upperint":"Intermedio-Alto / Avanzado"
-  },
-  it: {
-    "nav.about":"Chi sono","nav.experience":"Esperienza","nav.projects":"Progetti","nav.skills":"Competenze","nav.education":"Formazione",
-=======
     "education.heading":"Certificaciones e Idiomas",
     "education.tfgLabel":"Nota del TFG","education.tfgTitleLabel":"TFG",
     "education.tfgTitle":"\u201cModelos predictivos para las fluctuaciones de población del topillo campesino y riesgo en cultivos agrícolas\u201d",
@@ -1588,44 +1284,24 @@ const i18n = {
   },
   it: {
     "nav.about":"Chi sono","nav.experience":"Esperienza","nav.projects":"Progetti","nav.skills":"Competenze","nav.education":"Credenziali",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "hero.badge":"Disponibile per nuove opportunità",
     "hero.subtitle":"Data Scientist e Statistico",
     "hero.tagline":"Trasformo dati aziendali frammentati in soluzioni analitiche e di machine learning pronte per la produzione.",
     "hero.cta.email":"Email","hero.cta.linkedin":"LinkedIn","hero.cta.github":"GitHub","hero.cta.phone":"Telefono",
     "hero.stat2":"Progetti realizzati","hero.stat3":"Ruolo attuale","hero.stat4":"Lingue parlate",
     "actions.downloadCv":"CV","actions.downloadCvFull":"Scarica CV",
-<<<<<<< HEAD
-=======
     "footer.txtCv":"CV in testo semplice","footer.jsonResume":"resume.json",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "about.heading":"Chi Sono",
     "about.p1":"Statistico e data scientist con esperienza pratica nello sviluppo di soluzioni data-driven per la produzione industriale presso <strong>Renault Group</strong>, e nella ricerca applicata alla modellazione del rischio agricolo presso <strong>ITACyL</strong>.",
     "about.p2":"Solida base in modellazione statistica, machine learning, analisi predittiva e visualizzazione dati, con esperienza end-to-end nel trasformare dati aziendali frammentati in applicazioni analitiche pratiche e pronte per la produzione.",
     "about.p3":"Esperienza in Python, modellazione statistica, serie temporali e Streamlit, con un forte orientamento a risolvere problemi aperti in autonomia — dall'ingestione e modellazione fino al deployment e al monitoraggio.",
     "about.p4":"Particolarmente interessato a NLP, serie temporali, MLOps e architetture dati moderne. Sempre alla ricerca di nuovi strumenti da applicare a problemi reali.",
     "about.location":"Valladolid, Spagna",
-<<<<<<< HEAD
-    "experience.heading":"Esperienza",
-=======
     "experience.heading":"Esperienza e Formazione",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "experience.job1.title":"Data Scientist e Ingegnere Software",
     "experience.job1.company":"Renault Group — Dipartimento Innovazione, Palencia, Spagna",
     "experience.job1.date":"Gen 2026 – Presente",
     "experience.job1.sub1.title":"Piattaforma di Analisi e Previsione dell'Assenteismo",
-<<<<<<< HEAD
-    "experience.job1.sub1.li1":"Sviluppo end-to-end di una piattaforma analitica (React, FastAPI, Python, Looker) con oltre 3M di record persona-giorno su 99 variabili e in crescita.",
-    "experience.job1.sub1.li2":"Sostituzione di flussi frammentati in Excel/strumenti legacy con oltre 10 moduli interattivi a livello di stabilimento, reparto, officina, UET e dipendente.",
-    "experience.job1.sub1.li3":"Implementazione di autenticazione, controllo degli accessi basato sui ruoli, gestione dei dipendenti e reportistica automatizzata sull'intero stack.",
-    "experience.job1.sub1.li4":"Creazione di dashboard interattive con Plotly per l'evoluzione dell'assenteismo, ripartizioni organizzative e analisi delle ricorrenze.",
-    "experience.job1.sub1.li5":"<strong>Assistente IA:</strong> integrazione di un assistente in linguaggio naturale che interroga i dati di assenteismo nell'ambito organizzativo dell'utente, restituendo tabelle, grafici e risultati a livello di dipendente.",
-    "experience.job1.sub1.li6":"<strong>Previsione:</strong> creazione di modelli sperimentali (Elastic Net, Random Forest, SARIMAX) con un framework di validazione walk-forward progettato da zero per evitare data leakage temporale.",
-    "experience.job1.sub2.title":"Analisi di Produzione e Ottimizzazione",
-    "experience.job1.sub2.li1":"Manutenzione e ottimizzazione di <em>Docuzilla</em> (Python/DuckDB), strumento usato quotidianamente dagli ingegneri Renault, riducendo il tempo di esecuzione a meno del 10% dell'originale.",
-    "experience.job1.sub2.li2":"Sviluppo di un modello sperimentale di previsione del consumo di gas dello stabilimento per il giorno successivo, usando dati storici di consumo, produzione e meteo.",
-    "experience.job1.sub2.li3":"Progettazione di un database PostgreSQL per i fascicoli di gestione qualità, incluso schema, relazioni, indici e viste.",
-=======
     "experience.job1.sub1.li1":"Sviluppo end-to-end di una piattaforma analitica sull'assenteismo integrando React, FastAPI, Python, Looker, dataset locali e fonti web/JSON, con oltre 3M di record persona-giorno su 99 variabili e in crescita.",
     "experience.job1.sub1.li2":"Sviluppo dell'architettura applicativa, dal processamento dei dati e i servizi API fino a un frontend interattivo in React, sostituendo flussi frammentati in Excel/strumenti legacy con una piattaforma analitica centralizzata.",
     "experience.job1.sub1.li3":"Sviluppo di oltre 10 moduli funzionali che coprono l'analisi a livello di stabilimento, reparto, officina, UET e dipendente, con filtri a cascata ed esplorazione interattiva dei dati.",
@@ -1640,7 +1316,6 @@ const i18n = {
     "experience.job1.sub2.li2":"Ottimizzazione della logica di elaborazione principale, riducendo il tempo di esecuzione a meno del 10% dell'originale, sviluppando al contempo nuove funzionalità e miglioramenti algoritmici.",
     "experience.job1.sub2.li3":"Sviluppo di un modello sperimentale di previsione del consumo di gas dello stabilimento per il giorno successivo, usando dati storici di consumo, produzione e meteo.",
     "experience.job1.sub2.li4":"Progettazione di un database PostgreSQL per i fascicoli di gestione qualità, incluso schema, relazioni, vincoli, indici e viste.",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "experience.job2.title":"Data Scientist / Analista",
     "experience.job2.company":"ITACyL — Istituto Tecnologico Agrario di Castiglia e León",
     "experience.job2.date":"Apr 2025 – Lug 2025",
@@ -1649,12 +1324,6 @@ const i18n = {
     "experience.job2.li3":"Raggiungimento di un R² = 0,75 in validazione geografica e oltre il 95% di accuratezza nel prevedere la direzione della tendenza di popolazione.",
     "experience.job2.li4":"Identificazione di cicli demografici di circa 2-7 anni.",
     "projects.heading":"Progetti",
-<<<<<<< HEAD
-    "projects.viewDemo":"Vedi la demo live ↗",
-    "projects.signaldesk.desc":"Strumento di ricerca per dare priorità alle segnalazioni di insider trading, che combina i dati del Form 4 della SEC, il contesto di mercato e il rilevamento di anomalie in segnali quantitativi BUY/SELL/HOLD/IGNORE con relativo livello di confidenza, oltre a uno storico pubblico dei risultati rispetto all'S&amp;P 500.",
-    "projects.earnings.title":"Pipeline NLP per Earnings Call",
-    "projects.earnings.desc":"Pipeline NLP che analizza le trascrizioni delle earnings call con FinBERT per rilevare sentiment, incertezza dei dirigenti e discrepanze tra il discorso preparato e la sessione di domande, combinata con dati di mercato reali di Yahoo Finance in una dashboard interattiva.",
-=======
     "projects.viewDemo":"Vedi la demo live ↗","projects.mediaSoon":"Anteprima demo in arrivo",
     "projects.signaldesk.desc":"Strumento di ricerca per dare priorità alle segnalazioni di insider trading, che combina i dati del Form 4 della SEC, il contesto di mercato e il rilevamento di anomalie in segnali quantitativi BUY/SELL/HOLD/IGNORE con relativo livello di confidenza, oltre a uno storico pubblico dei risultati rispetto all'S&amp;P 500.",
     "case.readMore":"Vedi caso di studio","case.hide":"Nascondi caso di studio",
@@ -1680,7 +1349,6 @@ const i18n = {
     "case.earnings.p1":"I comunicati sui risultati arrivano come 8-K lunghi e pieni di boilerplate. Tono, linguaggio evasivo e come sono cambiati rispetto al trimestre precedente sono difficili da confrontare tra emittenti — e ancora di più da allineare al movimento del titolo nella sessione successiva.",
     "case.earnings.p2":"Ho costruito una pipeline che scarica l'Exhibit 99.1 da SEC EDGAR, pulisce il boilerplate, spezza la narrativa e valuta il sentiment con FinBERT, misurando l'incertezza con lexicon indipendenti dal modello. Costruisce timeline per emittente, alert rispetto allo storico di ciascuna società, una vista di confronto su una finestra comune, e unisce ogni data di filing ai prezzi di Yahoo Finance: la chiusura dopo l'8-K rispetto all'ultima chiusura in o prima di quella data, più l'eccesso rispetto allo SPY.",
     "case.earnings.p3":"La dashboard FastAPI + Plotly include analisi precomputate per AAPL, GOOGL, MSFT, NVDA e TSLA, così sentiment, incertezza, cambi tematici e rendimenti della sessione successiva si possono esplorare subito — in locale o nella demo pubblica.",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
     "projects.datapipe.desc":"Strumento di analisi e visualizzazione del codice che trasforma un progetto Python compresso in ZIP in un grafo interattivo del flusso dati, mostrando ogni lettura, trasformazione e fase di elaborazione dall'origine all'output finale.",
     "projects.stylometry.title":"Stilometria di Personaggi Letterari",
     "projects.stylometry.desc":"Pipeline NLP/LLM che confronta personaggi di opere letterarie diverse per trovare somiglianze psicologiche e narrative, usando un LLM locale per generare i profili ed embedding multilingue per calcolare la similarità.",
@@ -1699,15 +1367,6 @@ const i18n = {
     "skills.cat1":"Programmazione","skills.cat2":"Data Science e Statistica","skills.cat3":"Dati e Visualizzazione","skills.cat4":"Web e API","skills.cat5":"Database e Strumenti","skills.cat6":"Altro",
     "skills.timeseries":"Serie Temporali",
     "education.title":"Laurea in Statistica","education.institution":"Università di Valladolid (UVa)","education.date":"Set 2021 – Lug 2025",
-<<<<<<< HEAD
-    "education.heading":"Formazione e Credenziali",
-    "education.tfgLabel":"Voto della tesi","education.tfgTitleLabel":"Tesi",
-    "education.tfgTitle":"\u201cModelli predittivi per le fluttuazioni della popolazione dell'arvicola campestre e il rischio per le colture agricole\u201d",
-    "education.tfgNote":"modellazione di allerta precoce tramite analisi delle serie temporali.",
-    "certs.heading":"Certificazioni e Formazione",
-    "langs.heading":"Lingue","langs.spanish":"Spagnolo","langs.english":"Inglese","langs.italian":"Italiano",
-    "langs.native":"Madrelingua","langs.fullpro":"Competenza Professionale Completa","langs.upperint":"Intermedio-Avanzato"
-=======
     "education.heading":"Certificazioni e Lingue",
     "education.tfgLabel":"Voto della tesi","education.tfgTitleLabel":"Tesi",
     "education.tfgTitle":"\u201cModelli predittivi per le fluttuazioni della popolazione dell'arvicola campestre e il rischio per le colture agricole\u201d",
@@ -1715,7 +1374,6 @@ const i18n = {
     "certs.heading":"Certificazioni e Formazione","certs.verify":"Verifica ↗",
     "langs.heading":"Lingue","langs.spanish":"Spagnolo","langs.english":"Inglese","langs.italian":"Italiano",
     "langs.native":"Madrelingua","langs.fullpro":"Competenza Professionale Completa","langs.upperint":"Intermedio-Avanzato",
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
   }
 };
 
@@ -1733,24 +1391,17 @@ function applyLanguage(lang){
   const cvMobile = document.getElementById('cvDownloadMobile');
   if(cvDesktop) cvDesktop.setAttribute('href', cvFile);
   if(cvMobile) cvMobile.setAttribute('href', cvFile);
-<<<<<<< HEAD
-=======
   const footerTxt = document.getElementById('footerTxtLink');
   if(footerTxt) footerTxt.setAttribute('href', 'Alex_Cugnod_CV_' + lang.toUpperCase() + '.txt');
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
   document.documentElement.setAttribute('lang', lang);
   document.documentElement.setAttribute('data-lang', lang);
   try{ localStorage.setItem('cv-lang', lang); }catch(e){}
 }
 document.querySelectorAll('[data-lang-btn]').forEach(btn=>{
-<<<<<<< HEAD
-  btn.addEventListener('click', ()=> applyLanguage(btn.getAttribute('data-lang-btn')));
-=======
   btn.addEventListener('click', ()=>{
     applyLanguage(btn.getAttribute('data-lang-btn'));
     trackEvent('Language Switch', {lang: btn.getAttribute('data-lang-btn')});
   });
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 });
 let savedLang = 'en';
 try{ savedLang = localStorage.getItem('cv-lang') || 'en'; }catch(e){}
@@ -1762,11 +1413,6 @@ const mobileMenu = document.getElementById('mobileMenu');
 burgerBtn.addEventListener('click', ()=> mobileMenu.classList.toggle('open'));
 mobileMenu.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> mobileMenu.classList.remove('open')));
 
-<<<<<<< HEAD
-/* ============ active nav on scroll ============ */
-const sections = document.querySelectorAll('main section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-=======
 /* ============ journey timeline (sticky rail + scroll indicator) ============ */
 const journeyBlocks = document.querySelectorAll('.journey-block');
 const journeyMarkers = document.querySelectorAll('.journey-marker');
@@ -1804,63 +1450,20 @@ if(journeyBlocks.length){
 }
 
 /* ============ active nav on scroll ============ */
-if(NAV_INDICATOR === 'bar'){ document.body.classList.add('nav-style-bar'); }
-
 const sections = document.querySelectorAll('main section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
-const navCar = document.getElementById('navCar');
-const navBarIndicator = document.getElementById('navBarIndicator');
-const navLinksContainer = document.querySelector('.nav-links');
 
-function driveCarTo(link){
-  if(!link || !navLinksContainer) return;
-  const containerRect = navLinksContainer.getBoundingClientRect();
-  const linkRect = link.getBoundingClientRect();
-
-  if(NAV_INDICATOR === 'bar' && navBarIndicator){
-    const barWidth = linkRect.width * 0.7;
-    const targetX = (linkRect.left - containerRect.left) + (linkRect.width - barWidth)/2;
-    navBarIndicator.style.width = `${barWidth}px`;
-    navBarIndicator.style.transform = `translateX(${Math.max(0, targetX)}px)`;
-    return;
-  }
-  if(!navCar) return;
-  const carWidth = navCar.offsetWidth;
-  const targetX = (linkRect.left - containerRect.left) + (linkRect.width/2) - (carWidth/2);
-  navCar.style.transform = `translateX(${Math.max(0, targetX)}px)`;
-}
-
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 const navObserver = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
       navLinks.forEach(a=>{
-<<<<<<< HEAD
         a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
-=======
-        const isActive = a.getAttribute('href') === '#' + entry.target.id;
-        a.classList.toggle('active', isActive);
-        if(isActive) driveCarTo(a);
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
       });
     }
   });
 },{rootMargin:'-45% 0px -45% 0px'});
 sections.forEach(s=> navObserver.observe(s));
 
-<<<<<<< HEAD
-=======
-window.addEventListener('resize', ()=>{
-  const active = document.querySelector('.nav-links a.active') || navLinks[0];
-  driveCarTo(active);
-});
-window.addEventListener('load', ()=>{
-  const active = document.querySelector('.nav-links a.active') || navLinks[0];
-  driveCarTo(active);
-});
-if(navLinks[0]) driveCarTo(navLinks[0]);
-
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 /* ============ reveal on scroll ============ */
 const revealObserver = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
@@ -1869,8 +1472,6 @@ const revealObserver = new IntersectionObserver((entries)=>{
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=> revealObserver.observe(el));
 
-<<<<<<< HEAD
-=======
 /* ============ case study toggles ============ */
 document.querySelectorAll('.case-toggle').forEach(btn=>{
   const panel = document.getElementById(btn.getAttribute('data-case'));
@@ -1908,7 +1509,6 @@ if(footerTxtLinkEl) footerTxtLinkEl.addEventListener('click', ()=>{
   trackEvent('CV Download', {format: 'txt', lang});
 });
 
->>>>>>> 593d1d0 (Feature the earnings-call NLP dashboard as a shipped project.)
 /* ============ hero panel parallax tilt ============ */
 const panel = document.querySelector('.hero-panel');
 const stage = document.getElementById('tiltStage');
