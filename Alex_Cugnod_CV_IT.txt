@@ -15,7 +15,7 @@ Renault Group. Solida base in modellazione statistica, machine
 learning, analisi predittiva e visualizzazione dei dati, con
 esperienza end-to-end nel trasformare dati aziendali frammentati
 in applicazioni analitiche pratiche. Esperienza in Python,
-modellazione statistica, serie temporali e Streamlit, con un forte
+FastAPI, modellazione statistica e serie temporali, con un forte
 orientamento a risolvere problemi aperti in autonomia.
 
 ============================================================
@@ -136,7 +136,7 @@ Applicazione social di tracciamento film in corso di sviluppo, che
 combina account utente, API esterne, dati persistenti e analisi
 statistica.
 
-Movie Stats
+Movie Stats (In Sviluppo)
 Python, Streamlit
 Progetto personale triennale che analizza ~900 film con un dataset
 curato/scraped, con analisi statistiche interattive e
@@ -165,22 +165,22 @@ temporali.
 ============================================================
 COMPETENZE TECNICHE
 ============================================================
-Programmazione: Python, R, SQL, JavaScript, Java, C
+Programmazione: Python, R, SQL, JavaScript
 
 Data Science e Statistica: Regression, GLM, LASSO, Elastic Net,
 Random Forest, Gradient Boosting, SARIMAX, ETS, STL, PCA,
-Clustering, Bayesian Methods, Feature Engineering, Time Series
+Clustering, Bayesian Methods, Feature Engineering, Time Series,
+NLP, PyTorch
 
 Dati e Visualizzazione: Pandas, NumPy, Scikit-learn, Plotly, Power
 BI, Looker, Streamlit
 
 Web e API: React, FastAPI, REST APIs, Vite, React Router, HTML/CSS
 
-Database e Strumenti: PostgreSQL, DuckDB, Supabase, Git, Excel,
-SAS, MATLAB, SPSS, AWS, Azure
+Database e Strumenti: PostgreSQL, DuckDB, Supabase, Git, AWS, Azure
 
-Altro: Web Scraping, APIs, AI Agents, RAG, Data Pipelines,
-Predictive Modeling
+Altro: FinBERT, Hugging Face, AI Agents, RAG, Data Pipelines,
+Web Scraping
 
 ============================================================
 CERTIFICAZIONI E FORMAZIONE

@@ -7,7 +7,7 @@
     "email": "alex.cugnod@proton.me",
     "phone": "+34657103660",
     "url": "https://aleex-cs.github.io/",
-    "summary": "Statistician and Data Scientist with hands-on experience building data-driven solutions for industrial manufacturing at Renault Group. Strong background in statistical modeling, machine learning, predictive analytics and data visualization, with end-to-end experience turning fragmented business data into practical analytical applications. Experienced in Python, statistical modeling, time series and Streamlit, with a strong focus on solving open-ended problems independently.",
+    "summary": "Statistician and Data Scientist with hands-on experience building data-driven solutions for industrial manufacturing at Renault Group. Strong background in statistical modeling, machine learning, predictive analytics and data visualization, with end-to-end experience turning fragmented business data into practical analytical applications. Experienced in Python, FastAPI, statistical modeling and time series, with a strong focus on solving open-ended problems independently.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -123,12 +123,12 @@
     {
       "name": "Programming",
       "level": "",
-      "keywords": ["Python", "R", "SQL", "JavaScript", "Java", "C"]
+      "keywords": ["Python", "R", "SQL", "JavaScript"]
     },
     {
       "name": "Data Science & Statistics",
       "level": "",
-      "keywords": ["Regression", "GLM", "LASSO", "Elastic Net", "Random Forest", "Gradient Boosting", "SARIMAX", "ETS", "STL", "PCA", "Clustering", "Bayesian Methods", "Feature Engineering", "Time Series"]
+      "keywords": ["Regression", "GLM", "LASSO", "Elastic Net", "Random Forest", "Gradient Boosting", "SARIMAX", "ETS", "STL", "PCA", "Clustering", "Bayesian Methods", "Feature Engineering", "Time Series", "NLP", "PyTorch"]
     },
     {
       "name": "Data & Visualization",
@@ -143,12 +143,12 @@
     {
       "name": "Databases & Tools",
       "level": "",
-      "keywords": ["PostgreSQL", "DuckDB", "Supabase", "Git", "Excel", "SAS", "MATLAB", "SPSS", "AWS", "Azure"]
+      "keywords": ["PostgreSQL", "DuckDB", "Supabase", "Git", "AWS", "Azure"]
     },
     {
       "name": "Other",
       "level": "",
-      "keywords": ["Web Scraping", "APIs", "AI Agents", "RAG", "Data Pipelines", "Predictive Modeling"]
+      "keywords": ["FinBERT", "Hugging Face", "AI Agents", "RAG", "Data Pipelines", "Web Scraping"]
     }
   ],
   "languages": [
@@ -219,7 +219,7 @@
     },
     {
       "name": "Movie Stats",
-      "description": "Three-year personal project analyzing ~900 films using a curated/scraped dataset, with interactive statistical analyses and visualizations.",
+      "description": "Three-year personal project analyzing ~900 films using a curated/scraped dataset, with interactive statistical analyses and visualizations. Work in progress.",
       "highlights": [],
       "keywords": ["Python", "Streamlit"],
       "startDate": "",
@@ -238,7 +238,7 @@
       "type": "application"
     },
     {
-      "name": "beetle-mortality-glm",
+      "name": "Beetle mortality GLM",
       "description": "Classical beetle mortality dose-response study using logit, probit and cloglog GLMs, plus a sex x dose interaction analysis with model comparison and diagnostics.",
       "highlights": [],
       "keywords": ["R", "GLM"],
@@ -248,7 +248,7 @@
       "type": "academic"
     },
     {
-      "name": "loglinear-analysis",
+      "name": "Health survey log-linear analysis",
       "description": "Three-way contingency table analysis of the Spanish National Health Survey (ENSE 2017), studying associations between BMI, sex, age and region with Cochran-Mantel-Haenszel tests.",
       "highlights": [],
       "keywords": ["R", "Loglinear Models"],
@@ -258,7 +258,7 @@
       "type": "academic"
     },
     {
-      "name": "loglinear-models",
+      "name": "Ordinal log-linear models",
       "description": "Log-linear modelling of ordinal contingency tables, with model selection by AIC and marginal homogeneity testing between symmetry and quasi-symmetry models.",
       "highlights": [],
       "keywords": ["R", "Ordinal Data"],
@@ -268,7 +268,7 @@
       "type": "academic"
     },
     {
-      "name": "cycles-and-connected-components-in-graphs",
+      "name": "Cycles and connected components",
       "description": "Program that builds graphs on a 2D grid with local and knight-move connections, detecting cycles and connected components via DFS, with matplotlib visualization.",
       "highlights": [],
       "keywords": ["Python", "Graph Theory"],
@@ -278,7 +278,7 @@
       "type": "academic"
     },
     {
-      "name": "2d-hill-climbing-optimization",
+      "name": "2D hill-climbing optimisation",
       "description": "Hill Climbing optimization over a 2D function surface with Monte Carlo restarts, comparing four memoization strategies against brute-force search on runtime and accuracy.",
       "highlights": [],
       "keywords": ["Python", "Optimization"],

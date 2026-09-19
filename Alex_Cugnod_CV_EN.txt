@@ -14,8 +14,8 @@ data-driven solutions for industrial manufacturing at Renault Group.
 Strong background in statistical modeling, machine learning,
 predictive analytics and data visualization, with end-to-end
 experience turning fragmented business data into practical
-analytical applications. Experienced in Python, statistical
-modeling, time series and Streamlit, with a strong focus on
+analytical applications. Experienced in Python, FastAPI,
+statistical modeling and time series, with a strong focus on
 solving open-ended problems independently.
 
 ============================================================
@@ -131,7 +131,7 @@ authentication, episode-by-episode tracking, detailed viewing
 statistics, awards tracking and a bulk-import system from
 spreadsheets.
 
-Movie Stats
+Movie Stats (Work in Progress)
 Python, Streamlit
 Three-year personal project analyzing ~900 films using a
 curated/scraped dataset, with interactive statistical analyses and
@@ -159,22 +159,22 @@ time-series analysis.
 ============================================================
 TECHNICAL SKILLS
 ============================================================
-Programming: Python, R, SQL, JavaScript, Java, C
+Programming: Python, R, SQL, JavaScript
 
 Data Science & Statistics: Regression, GLM, LASSO, Elastic Net,
 Random Forest, Gradient Boosting, SARIMAX, ETS, STL, PCA,
-Clustering, Bayesian Methods, Feature Engineering, Time Series
+Clustering, Bayesian Methods, Feature Engineering, Time Series,
+NLP, PyTorch
 
 Data & Visualization: Pandas, NumPy, Scikit-learn, Plotly, Power BI,
 Looker, Streamlit
 
 Web & APIs: React, FastAPI, REST APIs, Vite, React Router, HTML/CSS
 
-Databases & Tools: PostgreSQL, DuckDB, Supabase, Git, Excel, SAS,
-MATLAB, SPSS, AWS, Azure
+Databases & Tools: PostgreSQL, DuckDB, Supabase, Git, AWS, Azure
 
-Other: Web Scraping, APIs, AI Agents, RAG, Data Pipelines,
-Predictive Modeling
+Other: FinBERT, Hugging Face, AI Agents, RAG, Data Pipelines,
+Web Scraping
 
 ============================================================
 CERTIFICATIONS & TRAINING

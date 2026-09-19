@@ -15,7 +15,7 @@ industrial en Renault Group. Solida base en modelado estadistico,
 machine learning, analitica predictiva y visualizacion de datos,
 con experiencia integral transformando datos fragmentados de
 negocio en aplicaciones analiticas practicas. Experiencia en
-Python, modelado estadistico, series temporales y Streamlit, con
+Python, FastAPI, modelado estadistico y series temporales, con
 un fuerte enfoque en resolver problemas abiertos de forma
 independiente.
 
@@ -137,7 +137,7 @@ Aplicacion social de seguimiento de peliculas en curso, combinando
 cuentas de usuario, APIs externas, datos persistentes y analisis
 estadistico.
 
-Movie Stats
+Movie Stats (En Desarrollo)
 Python, Streamlit
 Proyecto personal de tres anos analizando ~900 peliculas con un
 dataset curado/scraped, con analisis estadisticos interactivos y
@@ -165,11 +165,12 @@ alerta temprana mediante analisis de series temporales.
 ============================================================
 HABILIDADES TECNICAS
 ============================================================
-Programacion: Python, R, SQL, JavaScript, Java, C
+Programacion: Python, R, SQL, JavaScript
 
 Ciencia de Datos y Estadistica: Regression, GLM, LASSO, Elastic
 Net, Random Forest, Gradient Boosting, SARIMAX, ETS, STL, PCA,
-Clustering, Bayesian Methods, Feature Engineering, Time Series
+Clustering, Bayesian Methods, Feature Engineering, Time Series,
+NLP, PyTorch
 
 Datos y Visualizacion: Pandas, NumPy, Scikit-learn, Plotly, Power
 BI, Looker, Streamlit
@@ -177,10 +178,10 @@ BI, Looker, Streamlit
 Web y APIs: React, FastAPI, REST APIs, Vite, React Router, HTML/CSS
 
 Bases de Datos y Herramientas: PostgreSQL, DuckDB, Supabase, Git,
-Excel, SAS, MATLAB, SPSS, AWS, Azure
+AWS, Azure
 
-Otros: Web Scraping, APIs, AI Agents, RAG, Data Pipelines,
-Predictive Modeling
+Otros: FinBERT, Hugging Face, AI Agents, RAG, Data Pipelines,
+Web Scraping
 
 ============================================================
 CERTIFICACIONES Y FORMACION

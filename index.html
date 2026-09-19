@@ -394,17 +394,35 @@ h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3vw,2.3rem)
 .project-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.85rem;}
 .tag{background:var(--forest-tint);color:var(--forest-deep);font-size:.68rem;font-weight:700;padding:.24rem .58rem;border-radius:999px;}
 .project-card p{color:var(--ink-soft); font-size:.89rem; margin-bottom:.7rem;}
+.project-metric{
+  display:inline-block; margin:-.15rem 0 .85rem;
+  background:var(--forest-tint); color:var(--forest-deep);
+  font-size:.76rem; font-weight:700; line-height:1.45;
+  padding:.32rem .7rem; border-radius:999px;
+}
 
 .project-media{
-  border-radius:10px; overflow:hidden; border:1px solid var(--line); margin-bottom:.8rem;
+  position:relative; border-radius:10px; overflow:hidden; border:1px solid var(--line); margin-bottom:.8rem;
   background:var(--cream-deep);
 }
+.project-media[data-gif]{cursor:pointer;}
 .project-media img{width:100%; display:block;}
-.project-media-placeholder{
-  display:none; align-items:center; justify-content:center; gap:.5rem;
-  height:150px; color:var(--ink-faint); font-size:.8rem; font-weight:600;
+.project-media-hint{
+  position:absolute; right:.7rem; bottom:.7rem;
+  background:rgba(33,58,41,.88); color:var(--cream-card);
+  font-size:.68rem; font-weight:700; letter-spacing:.02em;
+  padding:.28rem .55rem; border-radius:999px; pointer-events:none;
+  opacity:.92; transition:opacity .2s ease;
 }
-.project-media-placeholder svg{width:20px;height:20px; flex:none; opacity:.7;}
+.project-media.is-playing .project-media-hint{opacity:0;}
+@media (prefers-reduced-motion:reduce){
+  .project-media-hint{display:none;}
+}
+.hint-tap{display:none;}
+@media (hover:none){
+  .hint-hover{display:none;}
+  .hint-tap{display:inline;}
+}
 .project-link{
   display:inline-flex; align-items:center; gap:.35rem; font-size:.82rem; font-weight:700;
   color:var(--forest-deep); text-decoration:none; border-bottom:1px solid transparent; transition:.2s ease;
@@ -488,13 +506,27 @@ h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3vw,2.3rem)
 .education-card p{color:var(--ink-soft); margin-bottom:.4rem; font-size:.94rem;}
 .education-card strong{color:var(--forest-deep);}
 
-footer{text-align:center; padding:3.2rem 1rem 3.6rem; color:var(--ink-faint); font-size:.84rem;}
+footer{text-align:center; padding:2.2rem 1rem 3.2rem; color:var(--ink-faint); font-size:.84rem;}
 footer p{margin-bottom:.3rem;}
 .footer-links{margin-top:.6rem !important; font-size:.78rem;}
 .footer-links a{color:var(--ink-faint); text-decoration:none; border-bottom:1px solid transparent; transition:color .2s ease, border-color .2s ease;}
 .footer-links a:hover{color:var(--forest-deep); border-color:var(--forest-deep);}
 .footer-links span{margin:0 .5rem; opacity:.6;}
-footer p{margin-bottom:.3rem;}
+
+.contact-band{
+  text-align:center; padding:3.2rem 1.4rem 1.2rem;
+  border-top:1px dashed var(--line); margin-top:1.4rem;
+}
+.contact-band h2{font-family:var(--serif); font-weight:600; font-size:1.45rem; margin-bottom:.45rem;}
+.contact-band p{color:var(--ink-soft); font-size:.95rem; margin-bottom:1.15rem;}
+.contact-links{display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem;}
+.contact-links a{
+  display:inline-flex; align-items:center; gap:.4rem;
+  background:var(--cream-card); border:1px solid var(--line); border-radius:999px;
+  padding:.55rem 1rem; font-size:.84rem; font-weight:700; color:var(--forest-deep);
+  text-decoration:none; transition:border-color .2s ease, box-shadow .2s ease;
+}
+.contact-links a:hover{border-color:var(--forest); box-shadow:var(--shadow-1);}
 
 /* ============ RESPONSIVE ============ */
 @media (max-width:900px){
@@ -532,7 +564,7 @@ footer p{margin-bottom:.3rem;}
   body{ background:#fff !important; color:#000 !important; }
   .paper, .ledger-rules, .hero-bg-art, .seal-large, .tilt-stage .index-card,
   .topbar, .burger, .mobile-menu, .lang-switch, .cv-download,
-  .case-toggle, footer{ display:none !important; }
+  .case-toggle, footer, .project-media-hint{ display:none !important; }
   header{ padding:0 0 1rem; }
   .hero-grid{ grid-template-columns:1fr; }
   .hero-panel{ display:none; }
@@ -691,7 +723,7 @@ footer p{margin-bottom:.3rem;}
       <div class="about-text">
         <p data-i18n="about.p1">Statistician and Data Scientist with hands-on experience building data-driven solutions for industrial manufacturing at <strong>Renault Group</strong>, and applied research in agricultural risk modelling at <strong>ITACyL</strong>.</p>
         <p data-i18n="about.p2">Strong background in statistical modelling, machine learning, predictive analytics and data visualisation, with end-to-end experience turning fragmented business data into practical, production-ready analytical applications.</p>
-        <p data-i18n="about.p3">Experienced in Python, statistical modelling, time series and Streamlit, with a strong focus on solving open-ended problems independently — from data ingestion and modelling to deployment and monitoring.</p>
+        <p data-i18n="about.p3">Experienced in Python, FastAPI, statistical modelling and time series, with a strong focus on solving open-ended problems independently — from data ingestion and modelling to deployment and monitoring.</p>
         <p data-i18n="about.p4">Particularly interested in NLP, time series, MLOps and modern data architectures. Always learning new tools and applying them to real-world problems.</p>
       </div>
       <div class="location-card">
@@ -854,13 +886,10 @@ footer p{margin-bottom:.3rem;}
         <div class="project-title-row"><div class="project-title">SignalDesk</div></div>
         <div class="project-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Finance</span><span class="tag">Machine Learning</span></div>
         <p data-i18n="projects.signaldesk.desc">Research tool for prioritising insider-trading filings, combining SEC Form 4 data, market context and anomaly detection into quantitative BUY/SELL/HOLD/IGNORE signals with confidence scores — plus a public transparency track record benchmarked against the S&amp;P 500.</p>
-        <div class="project-media">
-          <img src="demo_signaldesk.gif" alt="SignalDesk demo" loading="lazy"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="project-media-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none"/></svg>
-            <span data-i18n="projects.mediaSoon">Demo preview coming soon</span>
-          </div>
+        <p class="project-metric" data-i18n="projects.signaldesk.metric">Public T+5 / T+15 / T+30 track record vs the S&amp;P 500</p>
+        <div class="project-media" data-gif="demo_signaldesk.gif" data-poster="demo_signaldesk-poster.jpg" tabindex="0" role="button" aria-label="Play SignalDesk demo">
+          <img src="demo_signaldesk-poster.jpg" alt="SignalDesk demo" width="1280" height="720" loading="lazy">
+          <span class="project-media-hint"><span class="hint-hover" data-i18n="projects.mediaHover">Hover to play</span><span class="hint-tap" data-i18n="projects.mediaTap">Tap to play</span></span>
         </div>
         <a class="project-link" href="https://signaldesk-q9n7.onrender.com/" target="_blank" rel="noopener" data-i18n="projects.viewDemo">View live demo ↗</a>
         <button class="case-toggle" data-case="case-signaldesk" aria-expanded="false">
@@ -886,13 +915,10 @@ footer p{margin-bottom:.3rem;}
         <div class="project-title-row"><div class="project-title" data-i18n="projects.earnings.title">Earnings Call NLP Pipeline</div></div>
         <div class="project-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">FinBERT</span><span class="tag">NLP</span></div>
         <p data-i18n="projects.earnings.desc">Dashboard that scores SEC 8-K Exhibit 99.1 earnings releases with FinBERT, tracks uncertainty language over time, compares issuers, and overlays next-session stock returns versus SPY.</p>
-        <div class="project-media">
-          <img src="demo_earningcalls.gif" alt="Earnings Call NLP Pipeline demo" loading="lazy"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="project-media-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none"/></svg>
-            <span data-i18n="projects.mediaSoon">Demo preview coming soon</span>
-          </div>
+        <p class="project-metric" data-i18n="projects.earnings.metric">FinBERT on Exhibit 99.1 + next-session return vs SPY</p>
+        <div class="project-media" data-gif="demo_earningcalls.gif" data-poster="demo_earningcalls-poster.jpg" tabindex="0" role="button" aria-label="Play Earnings Call NLP demo">
+          <img src="demo_earningcalls-poster.jpg" alt="Earnings Call NLP Pipeline demo" width="1280" height="720" loading="lazy">
+          <span class="project-media-hint"><span class="hint-hover" data-i18n="projects.mediaHover">Hover to play</span><span class="hint-tap" data-i18n="projects.mediaTap">Tap to play</span></span>
         </div>
         <a class="project-link" href="https://earnings-call-nlp.onrender.com/" target="_blank" rel="noopener" data-i18n="projects.viewDemo">View live demo ↗</a>
         <a class="project-link" href="https://github.com/aleex-cs/earnings-call-nlp" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub ↗</a>
@@ -923,6 +949,16 @@ footer p{margin-bottom:.3rem;}
         <a class="project-link" href="https://github.com/aleex-cs/music_stats" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub ↗</a>
       </div>
       <div class="project-card">
+        <div class="project-title-row"><div class="project-title">Financial Portfolio Optimization</div></div>
+        <div class="project-tags"><span class="tag">R</span><span class="tag">Finance</span><span class="tag">Markowitz Model</span><span class="tag">Statistics</span></div>
+        <p data-i18n="projects.portfolio.desc">Analysis and optimisation of a seven-stock portfolio across different sectors (2020–2025): daily returns, robust covariance estimation, the efficient frontier, and a comparison of minimum-variance, maximum-return, maximum-Sharpe-ratio and equal-weighted portfolios.</p>
+        <a class="project-link" href="https://github.com/aleex-cs/financial-portfolio-optimization" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="minor-heading" data-i18n="projects.wip.heading">In progress</div>
+    <div class="projects-grid">
+      <div class="project-card">
         <div class="project-title-row"><div class="project-title">DataPipe</div><span class="wip-badge">WIP</span></div>
         <div class="project-tags"><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">D3.js</span><span class="tag">Static Analysis</span></div>
         <p data-i18n="projects.datapipe.desc">Code analysis and visualisation tool that turns a zipped Python project into an interactive graph of its data flow, showing every read, transformation and processing step from source to output.</p>
@@ -938,46 +974,40 @@ footer p{margin-bottom:.3rem;}
         <p data-i18n="projects.watchlist.desc">Full social web app for tracking films and shows, with authentication, episode-by-episode tracking, detailed viewing statistics, awards tracking and a bulk-import system from spreadsheets.</p>
       </div>
       <div class="project-card">
-        <div class="project-title-row"><div class="project-title">MovieStats</div></div>
+        <div class="project-title-row"><div class="project-title">MovieStats</div><span class="wip-badge">WIP</span></div>
         <div class="project-tags"><span class="tag">Streamlit</span><span class="tag">FastAPI</span><span class="tag">Scikit-learn</span><span class="tag">Plotly</span></div>
         <p data-i18n="projects.moviestats.desc">Personal film-analytics platform with category and bias analysis, an awards scoring system, and ML-based clustering of personal taste ("vibes") with automatic cluster labelling via GPT-4o-mini.</p>
-      </div>
-      <div class="project-card">
-        <div class="project-title-row"><div class="project-title">Financial Portfolio Optimization</div></div>
-        <div class="project-tags"><span class="tag">R</span><span class="tag">Finance</span><span class="tag">Markowitz Model</span><span class="tag">Statistics</span></div>
-        <p data-i18n="projects.portfolio.desc">Analysis and optimisation of a seven-stock portfolio across different sectors (2020–2025): daily returns, robust covariance estimation, the efficient frontier, and a comparison of minimum-variance, maximum-return, maximum-Sharpe-ratio and equal-weighted portfolios.</p>
-        <a class="project-link" href="https://github.com/aleex-cs/financial-portfolio-optimization" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub ↗</a>
       </div>
     </div>
 
     <div class="minor-heading" data-i18n="projects.minor.heading">Academic &amp; Algorithmic Projects</div>
     <div class="minor-grid">
       <div class="minor-card">
-        <h4>beetle-mortality-glm</h4>
+        <h4 data-i18n="projects.minor.beetle.title">Beetle mortality GLM</h4>
         <div class="project-tags"><span class="tag">R</span><span class="tag">GLM</span></div>
         <p data-i18n="projects.minor.beetle.desc">Classical beetle mortality dose–response study using logit, probit and cloglog GLMs, plus a sex × dose interaction analysis with model comparison and diagnostics.</p>
         <a class="project-link" href="https://github.com/aleex-cs/beetle-mortality-glm" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub ↗</a>
       </div>
       <div class="minor-card">
-        <h4>loglinear-analysis</h4>
+        <h4 data-i18n="projects.minor.loglinearA.title">Health survey log-linear analysis</h4>
         <div class="project-tags"><span class="tag">R</span><span class="tag">Loglinear Models</span></div>
         <p data-i18n="projects.minor.loglinearA.desc">Three-way contingency table analysis of the Spanish National Health Survey (ENSE 2017), studying associations between BMI, sex, age and region with Cochran–Mantel–Haenszel tests.</p>
         <a class="project-link" href="https://github.com/aleex-cs/loglinear-analysis" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub ↗</a>
       </div>
       <a class="minor-card" style="display:block; text-decoration:none;" href="https://github.com/aleex-cs/loglinear-models" target="_blank" rel="noopener">
-        <h4>loglinear-models</h4>
+        <h4 data-i18n="projects.minor.loglinearM.title">Ordinal log-linear models</h4>
         <div class="project-tags"><span class="tag">R</span><span class="tag">Ordinal Data</span></div>
         <p data-i18n="projects.minor.loglinearM.desc">Log-linear modelling of ordinal contingency tables, with model selection by AIC and marginal homogeneity testing between symmetry and quasi-symmetry models.</p>
         <span class="project-link" data-i18n="projects.viewGithub">View on GitHub ↗</span>
       </a>
       <div class="minor-card">
-        <h4>cycles-and-connected-components-in-graphs</h4>
+        <h4 data-i18n="projects.minor.graphs.title">Cycles and connected components</h4>
         <div class="project-tags"><span class="tag">Python</span><span class="tag">Graph Theory</span></div>
         <p data-i18n="projects.minor.graphs.desc">Program that builds graphs on a 2D grid with local and knight-move connections, detecting cycles and connected components via DFS, with matplotlib visualisation.</p>
         <a class="project-link" href="https://github.com/aleex-cs/cycles-and-connected-components-in-graphs" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub ↗</a>
       </div>
       <div class="minor-card">
-        <h4>2d-hill-climbing-optimization</h4>
+        <h4 data-i18n="projects.minor.hillclimb.title">2D hill-climbing optimisation</h4>
         <div class="project-tags"><span class="tag">Python</span><span class="tag">Optimization</span></div>
         <p data-i18n="projects.minor.hillclimb.desc">Hill Climbing optimisation over a 2D function surface with Monte Carlo restarts, comparing four memoization strategies against brute-force search on runtime and accuracy.</p>
         <a class="project-link" href="https://github.com/aleex-cs/2d-hill-climbing-optimization" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub ↗</a>
@@ -995,7 +1025,7 @@ footer p{margin-bottom:.3rem;}
         <h3 data-i18n="skills.cat1">Programming</h3>
         <div class="skill-tags">
           <span class="skill-tag">Python</span><span class="skill-tag">R</span><span class="skill-tag">SQL</span>
-          <span class="skill-tag">JavaScript</span><span class="skill-tag">Java</span><span class="skill-tag">C</span>
+          <span class="skill-tag">JavaScript</span>
         </div>
       </div>
       <div class="skill-category">
@@ -1006,6 +1036,7 @@ footer p{margin-bottom:.3rem;}
           <span class="skill-tag">SARIMAX</span><span class="skill-tag">ETS</span><span class="skill-tag">STL</span>
           <span class="skill-tag">PCA</span><span class="skill-tag">Clustering</span><span class="skill-tag">Bayesian Methods</span>
           <span class="skill-tag">Feature Engineering</span><span class="skill-tag" data-i18n="skills.timeseries">Time Series</span>
+          <span class="skill-tag">NLP</span><span class="skill-tag">PyTorch</span>
         </div>
       </div>
       <div class="skill-category">
@@ -1027,16 +1058,14 @@ footer p{margin-bottom:.3rem;}
         <h3 data-i18n="skills.cat5">Databases &amp; Tools</h3>
         <div class="skill-tags">
           <span class="skill-tag">PostgreSQL</span><span class="skill-tag">DuckDB</span><span class="skill-tag">Supabase</span>
-          <span class="skill-tag">Git</span><span class="skill-tag">Excel</span><span class="skill-tag">SAS</span>
-          <span class="skill-tag">MATLAB</span><span class="skill-tag">SPSS</span><span class="skill-tag">AWS</span>
-          <span class="skill-tag">Azure</span>
+          <span class="skill-tag">Git</span><span class="skill-tag">AWS</span><span class="skill-tag">Azure</span>
         </div>
       </div>
       <div class="skill-category">
         <h3 data-i18n="skills.cat6">Other</h3>
         <div class="skill-tags">
-          <span class="skill-tag">Web Scraping</span><span class="skill-tag">APIs</span><span class="skill-tag">AI Agents</span>
-          <span class="skill-tag">RAG</span><span class="skill-tag">Data Pipelines</span><span class="skill-tag">Predictive Modeling</span>
+          <span class="skill-tag">FinBERT</span><span class="skill-tag">Hugging Face</span><span class="skill-tag">AI Agents</span>
+          <span class="skill-tag">RAG</span><span class="skill-tag">Data Pipelines</span><span class="skill-tag">Web Scraping</span>
         </div>
       </div>
     </div>
@@ -1077,6 +1106,16 @@ footer p{margin-bottom:.3rem;}
 
 </main>
 
+<section id="contacto" class="contact-band reveal wrap">
+  <h2 data-i18n="contact.heading">Let's talk</h2>
+  <p data-i18n="contact.blurb">Open to data science and analytics roles — drop a line.</p>
+  <div class="contact-links">
+    <a href="mailto:alex.cugnod@proton.me" data-i18n="hero.cta.email">Email</a>
+    <a href="https://www.linkedin.com/in/alex-cugnod-6b0b48315/" target="_blank" rel="noopener" data-i18n="hero.cta.linkedin">LinkedIn</a>
+    <a href="https://github.com/aleex-cs" target="_blank" rel="noopener" data-i18n="hero.cta.github">GitHub</a>
+  </div>
+</section>
+
 <footer>
   <p>© 2026 Alex Cugnod Segovia</p>
   <p class="footer-links">
@@ -1105,10 +1144,11 @@ const i18n = {
     "hero.stat2":"Projects shipped","hero.stat3":"Current role","hero.stat4":"Languages spoken",
     "actions.downloadCv":"CV","actions.downloadCvFull":"Download CV",
     "footer.txtCv":"Plain-text CV","footer.jsonResume":"resume.json",
+    "contact.heading":"Let's talk","contact.blurb":"Open to data science and analytics roles — drop a line.",
     "about.heading":"About Me",
     "about.p1":"Statistician and Data Scientist with hands-on experience building data-driven solutions for industrial manufacturing at <strong>Renault Group</strong>, and applied research in agricultural risk modelling at <strong>ITACyL</strong>.",
     "about.p2":"Strong background in statistical modelling, machine learning, predictive analytics and data visualisation, with end-to-end experience turning fragmented business data into practical, production-ready analytical applications.",
-    "about.p3":"Experienced in Python, statistical modelling, time series and Streamlit, with a strong focus on solving open-ended problems independently — from data ingestion and modelling to deployment and monitoring.",
+    "about.p3":"Experienced in Python, FastAPI, statistical modelling and time series, with a strong focus on solving open-ended problems independently — from data ingestion and modelling to deployment and monitoring.",
     "about.p4":"Particularly interested in NLP, time series, MLOps and modern data architectures. Always learning new tools and applying them to real-world problems.",
     "about.location":"Valladolid, Spain",
     "experience.heading":"Experience &amp; Education",
@@ -1138,8 +1178,9 @@ const i18n = {
     "experience.job2.li3":"Achieved R² = 0.75 in geographic validation and over 95% accuracy in forecasting population trend direction.",
     "experience.job2.li4":"Identified demographic cycles ranging from approximately 2 to 7 years.",
     "projects.heading":"Projects",
-    "projects.viewDemo":"View live demo ↗","projects.mediaSoon":"Demo preview coming soon",
+    "projects.viewDemo":"View live demo ↗","projects.mediaHover":"Hover to play","projects.mediaTap":"Tap to play",
     "projects.signaldesk.desc":"Research tool for prioritising insider-trading filings, combining SEC Form 4 data, market context and anomaly detection into quantitative BUY/SELL/HOLD/IGNORE signals with confidence scores — plus a public transparency track record benchmarked against the S&amp;P 500.",
+    "projects.signaldesk.metric":"Public T+5 / T+15 / T+30 track record vs the S&amp;P 500",
     "case.readMore":"Read case study","case.hide":"Hide case study",
     "case.signaldesk.h1":"The Challenge","case.signaldesk.h2":"The Approach","case.signaldesk.h3":"The Result",
     "case.signaldesk.p1":"Retail investors trying to track insider trading face an avalanche of noise: thousands of routine SEC Form 4 filings with no real informational value, burying the rare transactions that actually tend to precede a price move.",
@@ -1159,6 +1200,7 @@ const i18n = {
     "case.itacyl.p3":"The model reached an R² of 0.75 in geographic validation and over 95% accuracy in forecasting the direction of population trends, and surfaced demographic cycles of roughly 2 to 7 years — giving the institute an early-warning tool where before there was none.",
     "projects.earnings.title":"Earnings Call NLP Pipeline",
     "projects.earnings.desc":"Dashboard that scores SEC 8-K Exhibit 99.1 earnings releases with FinBERT, tracks uncertainty language over time, compares issuers, and overlays next-session stock returns versus SPY.",
+    "projects.earnings.metric":"FinBERT on Exhibit 99.1 + next-session return vs SPY",
     "case.earnings.h1":"The Challenge","case.earnings.h2":"The Approach","case.earnings.h3":"The Result",
     "case.earnings.p1":"Earnings press releases land as long, boilerplate-heavy 8-K filings. Tone, hedge language and how they shifted versus last quarter are hard to compare across issuers — and harder still to line up with the next-session stock move.",
     "case.earnings.p2":"Built a pipeline that pulls Exhibit 99.1 from SEC EDGAR, strips boilerplate, chunks the narrative and scores sentiment with FinBERT, while measuring uncertainty with independent lexicons. It builds per-issuer timelines, anomaly alerts versus each company's own history, a compare view on a shared window, and joins every filing date to Yahoo Finance prices: the close after the 8-K versus the last close on or before it, plus excess return versus SPY.",
@@ -1171,7 +1213,13 @@ const i18n = {
     "projects.musicstats.desc":"Listening-habits dashboard built on Last.fm scrobble history, with sunburst charts, streamgraphs, animated bar-chart races and automatic listening-session detection.",
     "projects.portfolio.desc":"Analysis and optimisation of a seven-stock portfolio across different sectors (2020–2025): daily returns, robust covariance estimation, the efficient frontier, and a comparison of minimum-variance, maximum-return, maximum-Sharpe-ratio and equal-weighted portfolios.",
     "projects.viewGithub":"View on GitHub ↗",
+    "projects.wip.heading":"In progress",
     "projects.minor.heading":"Academic &amp; Algorithmic Projects",
+    "projects.minor.beetle.title":"Beetle mortality GLM",
+    "projects.minor.loglinearA.title":"Health survey log-linear analysis",
+    "projects.minor.loglinearM.title":"Ordinal log-linear models",
+    "projects.minor.graphs.title":"Cycles and connected components",
+    "projects.minor.hillclimb.title":"2D hill-climbing optimisation",
     "projects.minor.beetle.desc":"Classical beetle mortality dose–response study using logit, probit and cloglog GLMs, plus a sex × dose interaction analysis with model comparison and diagnostics.",
     "projects.minor.loglinearA.desc":"Three-way contingency table analysis of the Spanish National Health Survey (ENSE 2017), studying associations between BMI, sex, age and region with Cochran–Mantel–Haenszel tests.",
     "projects.minor.loglinearM.desc":"Log-linear modelling of ordinal contingency tables, with model selection by AIC and marginal homogeneity testing between symmetry and quasi-symmetry models.",
@@ -1198,10 +1246,11 @@ const i18n = {
     "hero.stat2":"Proyectos","hero.stat3":"Puesto actual","hero.stat4":"Idiomas hablados",
     "actions.downloadCv":"CV","actions.downloadCvFull":"Descargar CV",
     "footer.txtCv":"CV en texto plano","footer.jsonResume":"resume.json",
+    "contact.heading":"Hablemos","contact.blurb":"Abierto a roles de data science y analítica — escríbeme.",
     "about.heading":"Sobre Mí",
     "about.p1":"Estadístico y científico de datos con experiencia práctica en el desarrollo de soluciones basadas en datos para la industria en <strong>Renault Group</strong>, y en investigación aplicada al modelado de riesgo agrícola en <strong>ITACyL</strong>.",
     "about.p2":"Sólida base en modelado estadístico, machine learning, analítica predictiva y visualización de datos, con experiencia integral transformando datos fragmentados de negocio en aplicaciones analíticas prácticas y listas para producción.",
-    "about.p3":"Experiencia en Python, modelado estadístico, series temporales y Streamlit, con un enfoque marcado en resolver problemas abiertos de forma independiente: desde la ingesta y el modelado hasta el despliegue y la monitorización.",
+    "about.p3":"Experiencia en Python, FastAPI, modelado estadístico y series temporales, con un enfoque marcado en resolver problemas abiertos de forma independiente: desde la ingesta y el modelado hasta el despliegue y la monitorización.",
     "about.p4":"Especial interés en NLP, series temporales, MLOps y arquitecturas de datos modernas. Siempre aprendiendo nuevas herramientas y aplicándolas a problemas reales.",
     "about.location":"Valladolid, España",
     "experience.heading":"Experiencia y Formación",
@@ -1231,8 +1280,9 @@ const i18n = {
     "experience.job2.li3":"Logro de un R² = 0,75 en validación geográfica y más del 95% de precisión al predecir la dirección de la tendencia poblacional.",
     "experience.job2.li4":"Identificación de ciclos demográficos de entre 2 y 7 años aproximadamente.",
     "projects.heading":"Proyectos",
-    "projects.viewDemo":"Ver demo en vivo ↗","projects.mediaSoon":"Vista previa de la demo próximamente",
+    "projects.viewDemo":"Ver demo en vivo ↗","projects.mediaHover":"Pasa el cursor para reproducir","projects.mediaTap":"Toca para reproducir",
     "projects.signaldesk.desc":"Herramienta de investigación para priorizar operaciones de insider trading, combinando datos del Formulario 4 de la SEC, contexto de mercado y detección de anomalías en señales cuantitativas BUY/SELL/HOLD/IGNORE con nivel de confianza, además de un histórico público de resultados frente al S&amp;P 500.",
+    "projects.signaldesk.metric":"Histórico público T+5 / T+15 / T+30 frente al S&amp;P 500",
     "case.readMore":"Ver caso de estudio","case.hide":"Ocultar caso de estudio",
     "case.signaldesk.h1":"El Reto","case.signaldesk.h2":"El Enfoque","case.signaldesk.h3":"El Resultado",
     "case.signaldesk.p1":"Los inversores particulares que intentan seguir el insider trading se enfrentan a una avalancha de ruido: miles de formularios 4 de la SEC rutinarios sin valor informativo real, que entierran las pocas operaciones que sí suelen anticipar un movimiento de precio.",
@@ -1252,6 +1302,7 @@ const i18n = {
     "case.itacyl.p3":"El modelo alcanzó un R² de 0,75 en validación geográfica y más del 95% de precisión al predecir la dirección de la tendencia poblacional, y sacó a la luz ciclos demográficos de entre 2 y 7 años aproximadamente, dando al instituto una herramienta de alerta temprana donde antes no había ninguna.",
     "projects.earnings.title":"Pipeline de NLP para Earnings Calls",
     "projects.earnings.desc":"Dashboard que puntúa los comunicados de resultados del Exhibit 99.1 de los 8-K de la SEC con FinBERT, sigue el lenguaje de incertidumbre en el tiempo, compara emisores y superpone la rentabilidad de la siguiente sesión frente al SPY.",
+    "projects.earnings.metric":"FinBERT sobre Exhibit 99.1 + rentabilidad de la siguiente sesión vs SPY",
     "case.earnings.h1":"El Reto","case.earnings.h2":"El Enfoque","case.earnings.h3":"El Resultado",
     "case.earnings.p1":"Los comunicados de resultados llegan como 8-K largos y llenos de boilerplate. El tono, el lenguaje evasivo y cómo han cambiado respecto al trimestre anterior son difíciles de comparar entre emisores, y más aún de alinear con el movimiento de la acción en la siguiente sesión.",
     "case.earnings.p2":"Desarrollé un pipeline que descarga el Exhibit 99.1 de SEC EDGAR, limpia el boilerplate, trocea la narrativa y puntúa el sentimiento con FinBERT, midiendo la incertidumbre con lexicons independientes del modelo. Construye líneas temporales por emisor, alertas frente al histórico de cada compañía, una vista de comparación en una ventana común, y une cada fecha de filing a precios de Yahoo Finance: el cierre posterior al 8-K frente al último cierre en o antes de esa fecha, más el exceso frente al SPY.",
@@ -1264,7 +1315,13 @@ const i18n = {
     "projects.musicstats.desc":"Dashboard de hábitos de escucha construido sobre el historial de scrobbles de Last.fm, con gráficos sunburst, streamgraphs, carreras de barras animadas y detección automática de sesiones de escucha.",
     "projects.portfolio.desc":"Análisis y optimización de una cartera de siete acciones de distintos sectores (2020–2025): rentabilidades diarias, estimación robusta de covarianza, frontera eficiente, y comparación de carteras de mínima varianza, máximo retorno, máximo ratio de Sharpe y ponderación equitativa.",
     "projects.viewGithub":"Ver en GitHub ↗",
+    "projects.wip.heading":"En desarrollo",
     "projects.minor.heading":"Proyectos Académicos y Algorítmicos",
+    "projects.minor.beetle.title":"GLM de mortalidad de escarabajos",
+    "projects.minor.loglinearA.title":"Análisis log-lineal de encuesta de salud",
+    "projects.minor.loglinearM.title":"Modelos log-lineales ordinales",
+    "projects.minor.graphs.title":"Ciclos y componentes conexas",
+    "projects.minor.hillclimb.title":"Optimización hill-climbing 2D",
     "projects.minor.beetle.desc":"Estudio clásico de mortalidad de escarabajos dosis-respuesta usando GLMs logit, probit y cloglog, más un análisis de interacción sexo × dosis con comparación de modelos y diagnóstico.",
     "projects.minor.loglinearA.desc":"Análisis de tablas de contingencia tridimensionales de la Encuesta Nacional de Salud (ENSE 2017), estudiando asociaciones entre BMI, sexo, edad y CCAA con tests de Cochran-Mantel-Haenszel.",
     "projects.minor.loglinearM.desc":"Modelado log-lineal de tablas de contingencia ordinales, con selección de modelo por AIC y pruebas de homogeneidad marginal entre modelos de simetría y cuasi-simetría.",
@@ -1291,10 +1348,11 @@ const i18n = {
     "hero.stat2":"Progetti realizzati","hero.stat3":"Ruolo attuale","hero.stat4":"Lingue parlate",
     "actions.downloadCv":"CV","actions.downloadCvFull":"Scarica CV",
     "footer.txtCv":"CV in testo semplice","footer.jsonResume":"resume.json",
+    "contact.heading":"Parliamone","contact.blurb":"Aperto a ruoli di data science e analytics — scrivimi.",
     "about.heading":"Chi Sono",
     "about.p1":"Statistico e data scientist con esperienza pratica nello sviluppo di soluzioni data-driven per la produzione industriale presso <strong>Renault Group</strong>, e nella ricerca applicata alla modellazione del rischio agricolo presso <strong>ITACyL</strong>.",
     "about.p2":"Solida base in modellazione statistica, machine learning, analisi predittiva e visualizzazione dati, con esperienza end-to-end nel trasformare dati aziendali frammentati in applicazioni analitiche pratiche e pronte per la produzione.",
-    "about.p3":"Esperienza in Python, modellazione statistica, serie temporali e Streamlit, con un forte orientamento a risolvere problemi aperti in autonomia — dall'ingestione e modellazione fino al deployment e al monitoraggio.",
+    "about.p3":"Esperienza in Python, FastAPI, modellazione statistica e serie temporali, con un forte orientamento a risolvere problemi aperti in autonomia — dall'ingestione e modellazione fino al deployment e al monitoraggio.",
     "about.p4":"Particolarmente interessato a NLP, serie temporali, MLOps e architetture dati moderne. Sempre alla ricerca di nuovi strumenti da applicare a problemi reali.",
     "about.location":"Valladolid, Spagna",
     "experience.heading":"Esperienza e Formazione",
@@ -1324,8 +1382,9 @@ const i18n = {
     "experience.job2.li3":"Raggiungimento di un R² = 0,75 in validazione geografica e oltre il 95% di accuratezza nel prevedere la direzione della tendenza di popolazione.",
     "experience.job2.li4":"Identificazione di cicli demografici di circa 2-7 anni.",
     "projects.heading":"Progetti",
-    "projects.viewDemo":"Vedi la demo live ↗","projects.mediaSoon":"Anteprima demo in arrivo",
+    "projects.viewDemo":"Vedi la demo live ↗","projects.mediaHover":"Passa il mouse per riprodurre","projects.mediaTap":"Tocca per riprodurre",
     "projects.signaldesk.desc":"Strumento di ricerca per dare priorità alle segnalazioni di insider trading, che combina i dati del Form 4 della SEC, il contesto di mercato e il rilevamento di anomalie in segnali quantitativi BUY/SELL/HOLD/IGNORE con relativo livello di confidenza, oltre a uno storico pubblico dei risultati rispetto all'S&amp;P 500.",
+    "projects.signaldesk.metric":"Storico pubblico T+5 / T+15 / T+30 rispetto all'S&amp;P 500",
     "case.readMore":"Vedi caso di studio","case.hide":"Nascondi caso di studio",
     "case.signaldesk.h1":"La Sfida","case.signaldesk.h2":"L'Approccio","case.signaldesk.h3":"Il Risultato",
     "case.signaldesk.p1":"Gli investitori retail che cercano di seguire l'insider trading affrontano una valanga di rumore: migliaia di Form 4 della SEC di routine senza reale valore informativo, che nascondono le rare operazioni che tendono davvero ad anticipare un movimento di prezzo.",
@@ -1345,6 +1404,7 @@ const i18n = {
     "case.itacyl.p3":"Il modello ha raggiunto un R² di 0,75 in validazione geografica e oltre il 95% di accuratezza nel prevedere la direzione della tendenza di popolazione, individuando cicli demografici di circa 2-7 anni — offrendo all'istituto uno strumento di allerta precoce dove prima non ce n'era nessuno.",
     "projects.earnings.title":"Pipeline NLP per Earnings Call",
     "projects.earnings.desc":"Dashboard che valuta i comunicati sui risultati dell'Exhibit 99.1 dei 8-K SEC con FinBERT, segue il linguaggio di incertezza nel tempo, confronta gli emittenti e sovrappone i rendimenti della sessione successiva rispetto allo SPY.",
+    "projects.earnings.metric":"FinBERT su Exhibit 99.1 + rendimento della sessione successiva vs SPY",
     "case.earnings.h1":"La Sfida","case.earnings.h2":"L'Approccio","case.earnings.h3":"Il Risultato",
     "case.earnings.p1":"I comunicati sui risultati arrivano come 8-K lunghi e pieni di boilerplate. Tono, linguaggio evasivo e come sono cambiati rispetto al trimestre precedente sono difficili da confrontare tra emittenti — e ancora di più da allineare al movimento del titolo nella sessione successiva.",
     "case.earnings.p2":"Ho costruito una pipeline che scarica l'Exhibit 99.1 da SEC EDGAR, pulisce il boilerplate, spezza la narrativa e valuta il sentiment con FinBERT, misurando l'incertezza con lexicon indipendenti dal modello. Costruisce timeline per emittente, alert rispetto allo storico di ciascuna società, una vista di confronto su una finestra comune, e unisce ogni data di filing ai prezzi di Yahoo Finance: la chiusura dopo l'8-K rispetto all'ultima chiusura in o prima di quella data, più l'eccesso rispetto allo SPY.",
@@ -1357,7 +1417,13 @@ const i18n = {
     "projects.musicstats.desc":"Dashboard delle abitudini di ascolto basata sullo storico degli scrobble di Last.fm, con grafici sunburst, streamgraph, bar chart race animate e rilevamento automatico delle sessioni di ascolto.",
     "projects.portfolio.desc":"Analisi e ottimizzazione di un portafoglio di sette azioni di settori diversi (2020–2025): rendimenti giornalieri, stima robusta della covarianza, frontiera efficiente, e confronto tra portafogli a minima varianza, massimo rendimento, massimo rapporto di Sharpe e a pesi uguali.",
     "projects.viewGithub":"Vedi su GitHub ↗",
+    "projects.wip.heading":"In corso",
     "projects.minor.heading":"Progetti Accademici e Algoritmici",
+    "projects.minor.beetle.title":"GLM di mortalità dei coleotteri",
+    "projects.minor.loglinearA.title":"Analisi log-lineare dell'indagine sulla salute",
+    "projects.minor.loglinearM.title":"Modelli log-lineari ordinali",
+    "projects.minor.graphs.title":"Cicli e componenti connesse",
+    "projects.minor.hillclimb.title":"Ottimizzazione hill-climbing 2D",
     "projects.minor.beetle.desc":"Studio classico di mortalità dei coleotteri dose-risposta con GLM logit, probit e cloglog, più un'analisi di interazione sesso × dose con confronto tra modelli e diagnostica.",
     "projects.minor.loglinearA.desc":"Analisi di tabelle di contingenza a tre vie dell'Indagine Nazionale sulla Salute spagnola (ENSE 2017), studiando le associazioni tra BMI, sesso, età e regione con test di Cochran-Mantel-Haenszel.",
     "projects.minor.loglinearM.desc":"Modellazione log-lineare di tabelle di contingenza ordinali, con selezione del modello tramite AIC e test di omogeneità marginale tra modelli di simmetria e quasi-simmetria.",
@@ -1489,6 +1555,40 @@ document.querySelectorAll('.case-toggle').forEach(btn=>{
     if(isOpen) trackEvent('Case Study Opened', {study: btn.getAttribute('data-case')});
   });
 });
+
+/* ============ project GIF: poster until hover/tap ============ */
+(function(){
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canHover = window.matchMedia('(hover: hover)').matches;
+  document.querySelectorAll('.project-media[data-gif]').forEach(el=>{
+    const img = el.querySelector('img');
+    const poster = el.getAttribute('data-poster');
+    const gif = el.getAttribute('data-gif');
+    if(!img || !poster || !gif || reduceMotion) return;
+    const play = ()=>{
+      if(img.getAttribute('src') === gif) return;
+      img.src = gif;
+      el.classList.add('is-playing');
+    };
+    const stop = ()=>{
+      img.src = poster;
+      el.classList.remove('is-playing');
+    };
+    if(canHover){
+      el.addEventListener('mouseenter', play);
+      el.addEventListener('mouseleave', stop);
+      el.addEventListener('focus', play);
+      el.addEventListener('blur', stop);
+    } else {
+      el.addEventListener('click', ()=>{
+        if(el.classList.contains('is-playing')) stop(); else play();
+      });
+      el.addEventListener('keydown', (e)=>{
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); el.click(); }
+      });
+    }
+  });
+})();
 
 /* ============ outbound / download event tracking ============ */
 document.querySelectorAll('a[target="_blank"]').forEach(a=>{
