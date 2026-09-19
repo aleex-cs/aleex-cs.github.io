@@ -1,0 +1,296 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+  "basics": {
+    "name": "Alex Cugnod Segovia",
+    "label": "Data Scientist & Software Engineer",
+    "image": "https://aleex-cs.github.io/og-image.png",
+    "email": "alex.cugnod@proton.me",
+    "phone": "+34657103660",
+    "url": "https://aleex-cs.github.io/",
+    "summary": "Statistician and Data Scientist with hands-on experience building data-driven solutions for industrial manufacturing at Renault Group. Strong background in statistical modeling, machine learning, predictive analytics and data visualization, with end-to-end experience turning fragmented business data into practical analytical applications. Experienced in Python, statistical modeling, time series and Streamlit, with a strong focus on solving open-ended problems independently.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Valladolid",
+      "countryCode": "ES",
+      "region": "Castilla y Leon"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "alex-cugnod",
+        "url": "https://www.linkedin.com/in/alex-cugnod-6b0b48315/"
+      },
+      {
+        "network": "GitHub",
+        "username": "aleex-cs",
+        "url": "https://github.com/aleex-cs"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Renault Group",
+      "position": "Data Scientist & Software Engineer",
+      "url": "https://www.renaultgroup.com/",
+      "startDate": "2026-01-01",
+      "endDate": "",
+      "summary": "Innovation Department, Palencia, Spain. Built full-stack analytics platforms end to end, from data ingestion to interactive dashboards and forecasting models.",
+      "highlights": [
+        "Built an end-to-end absenteeism analytics platform (React, FastAPI, Python) pulling from Looker (automated pipeline for large datasets), local datasets and web/JSON sources, covering 3M+ person-day records across 99 variables and growing",
+        "Built 10+ functional modules covering factory, department, workshop, UET and employee-level analysis, giving every department head and the assistant director a single place to manage absenteeism: who's absent, when, why, and where else patterns are showing up",
+        "Implemented authentication, role-based access control, employee/department management, and automated reporting",
+        "Integrated an AI assistant that answers natural-language questions about absenteeism data with tables, charts and employee-level detail",
+        "Developed experimental absenteeism forecasting models (Elastic Net, Random Forest, SARIMAX) validated with a custom walk-forward framework built to avoid temporal data leakage",
+        "Rebuilt the core processing logic of Docuzilla (Python/DuckDB), an internal tool used daily by engineers, cutting execution time to under 10% of the original runtime",
+        "Developed an experimental next-day factory gas-consumption forecasting model using historical consumption, production and weather data",
+        "Designed a PostgreSQL database for quality-management dossiers, including schema, relationships, constraints, indexes and views"
+      ]
+    },
+    {
+      "name": "ITACyL (Agricultural Technological Institute of Castilla y Leon)",
+      "position": "Data Scientist / Analyst",
+      "url": "https://www.itacyl.es/",
+      "startDate": "2025-04-01",
+      "endDate": "2025-07-31",
+      "summary": "Built the institute's first predictive modeling approach for common vole population dynamics using historical regional data.",
+      "highlights": [
+        "Built statistical and machine learning models in R and Python with spatial and temporal validation, reducing 145 candidate variables to 12 key predictors",
+        "Achieved R2 = 0.75 in geographical validation and over 95% accuracy in forecasting population trend direction",
+        "Identified demographic cycles ranging from approximately 2 to 7 years"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Valladolid (UVa)",
+      "url": "https://www.uva.es/",
+      "area": "Statistics",
+      "studyType": "BSc",
+      "startDate": "2021-09-01",
+      "endDate": "2025-07-31",
+      "score": "Thesis grade: 9.8/10",
+      "courses": [
+        "Thesis: \"Predictive Models for Common Vole Population Fluctuations and Agricultural Crop Risk\" - early-warning modeling using time-series analysis"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "AWS Certified Machine Learning - Specialty (MLS-C01) Cert Prep",
+      "date": "2026-04-10",
+      "issuer": "LinkedIn Learning",
+      "url": "https://www.linkedin.com/learning/certificates/c6980b87f040dd6cce36d2004715f9fae47e43a742152da339a9abcda7a7b52f"
+    },
+    {
+      "name": "Agentic AI: Building Data-First AI Agents",
+      "date": "2026-03-27",
+      "issuer": "LinkedIn Learning",
+      "url": "https://www.linkedin.com/learning/certificates/2b9aa83b226385c3b98be14f3d1f709c41ba341da7576b73d2c45252afe4388f"
+    },
+    {
+      "name": "Build with AI: Autonomous Agents with LangChain and Hugging Face",
+      "date": "2026-03-27",
+      "issuer": "LinkedIn Learning",
+      "url": "https://www.linkedin.com/learning/certificates/08f4a6c5994d211d9ed641870e6ef263fa5ce743c299e3a916ccd00ca31f6ab2"
+    },
+    {
+      "name": "Building a Personalized Chatbot with OpenAI and LangChain",
+      "date": "2026-03-27",
+      "issuer": "LinkedIn Learning",
+      "url": "https://www.linkedin.com/learning/certificates/d58803a73453eb3a21fb0d6e04cb1178cfa47a0e417007651b1c65092bd8222a"
+    },
+    {
+      "name": "Program Evaluation for Data Science",
+      "date": "2026-03-27",
+      "issuer": "LinkedIn Learning",
+      "url": "https://www.linkedin.com/learning/certificates/308e4f684573e60adc641f576f9d6640e25de20a0b2cf4c1c25c62671a5c8b8b"
+    },
+    {
+      "name": "Advanced NoSQL for Data Science",
+      "date": "2026-03-27",
+      "issuer": "LinkedIn Learning",
+      "url": "https://www.linkedin.com/learning/certificates/9b2c5bcb25de3952842363b87d5f2b2396f9123955e2969742671da3a38d4220"
+    },
+    {
+      "name": "Looker SSBD Training",
+      "date": "",
+      "issuer": "Renault Group",
+      "url": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "level": "",
+      "keywords": ["Python", "R", "SQL", "JavaScript", "Java", "C"]
+    },
+    {
+      "name": "Data Science & Statistics",
+      "level": "",
+      "keywords": ["Regression", "GLM", "LASSO", "Elastic Net", "Random Forest", "Gradient Boosting", "SARIMAX", "ETS", "STL", "PCA", "Clustering", "Bayesian Methods", "Feature Engineering", "Time Series"]
+    },
+    {
+      "name": "Data & Visualization",
+      "level": "",
+      "keywords": ["Pandas", "NumPy", "Scikit-learn", "Plotly", "Power BI", "Looker", "Streamlit"]
+    },
+    {
+      "name": "Web & APIs",
+      "level": "",
+      "keywords": ["React", "FastAPI", "REST APIs", "Vite", "React Router", "HTML/CSS"]
+    },
+    {
+      "name": "Databases & Tools",
+      "level": "",
+      "keywords": ["PostgreSQL", "DuckDB", "Supabase", "Git", "Excel", "SAS", "MATLAB", "SPSS", "AWS", "Azure"]
+    },
+    {
+      "name": "Other",
+      "level": "",
+      "keywords": ["Web Scraping", "APIs", "AI Agents", "RAG", "Data Pipelines", "Predictive Modeling"]
+    }
+  ],
+  "languages": [
+    { "language": "Spanish", "fluency": "Native speaker" },
+    { "language": "English", "fluency": "Full professional proficiency" },
+    { "language": "Italian", "fluency": "Upper-intermediate / Advanced" }
+  ],
+  "projects": [
+    {
+      "name": "SignalDesk",
+      "description": "Research tool for prioritizing insider-trading filings, combining SEC Form 4 data, market context and anomaly detection into quantitative BUY/SELL/HOLD/IGNORE signals with confidence scores, plus a public transparency track record benchmarked against the S&P 500.",
+      "highlights": [],
+      "keywords": ["Python", "FastAPI", "Finance", "Machine Learning"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://signaldesk-q9n7.onrender.com/",
+      "type": "application"
+    },
+    {
+      "name": "Earnings Call NLP Pipeline",
+      "description": "Dashboard that scores SEC 8-K Exhibit 99.1 earnings releases with FinBERT, tracks uncertainty language over time, compares issuers, and overlays next-session stock returns versus SPY.",
+      "highlights": [],
+      "keywords": ["Python", "FastAPI", "FinBERT", "NLP"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://earnings-call-nlp.onrender.com/",
+      "type": "application"
+    },
+    {
+      "name": "Music Stats",
+      "description": "Listening-habits dashboard built on Last.fm scrobble history, with sunburst charts, streamgraphs, animated bar-chart races and automatic listening-session detection.",
+      "highlights": [],
+      "keywords": ["Python", "Streamlit"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://musicstats.streamlit.app/",
+      "type": "application"
+    },
+    {
+      "name": "DataPipe",
+      "description": "Code analysis and visualization tool that turns a zipped Python project into an interactive graph of its data flow, showing every read, transformation and processing step from source to output. Work in progress.",
+      "highlights": [],
+      "keywords": ["FastAPI", "React", "D3.js", "Static Analysis"],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "type": "application"
+    },
+    {
+      "name": "Literary Character Stylometry",
+      "description": "NLP/LLM pipeline that compares literary characters across books to find psychological and narrative similarities, using a local LLM for profile generation and multilingual embeddings for similarity scoring. Work in progress.",
+      "highlights": [],
+      "keywords": ["Python", "NLP", "LLM", "spaCy"],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "type": "application"
+    },
+    {
+      "name": "WatchList",
+      "description": "Full social web app for tracking films and shows, with authentication, episode-by-episode tracking, detailed viewing statistics, awards tracking and a bulk-import system from spreadsheets. Work in progress.",
+      "highlights": [],
+      "keywords": ["Python", "JavaScript", "Supabase", "TMDB API"],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "type": "application"
+    },
+    {
+      "name": "Movie Stats",
+      "description": "Three-year personal project analyzing ~900 films using a curated/scraped dataset, with interactive statistical analyses and visualizations.",
+      "highlights": [],
+      "keywords": ["Python", "Streamlit"],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "type": "application"
+    },
+    {
+      "name": "Financial Portfolio Optimization",
+      "description": "Analysis and optimization of a seven-stock portfolio (2020-2025): efficient frontier, robust covariance estimation, and comparison of minimum-variance, maximum-return, maximum-Sharpe-ratio and equal-weighted portfolios.",
+      "highlights": [],
+      "keywords": ["R", "Finance", "Markowitz Model", "Statistics"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://github.com/aleex-cs/financial-portfolio-optimization",
+      "type": "application"
+    },
+    {
+      "name": "beetle-mortality-glm",
+      "description": "Classical beetle mortality dose-response study using logit, probit and cloglog GLMs, plus a sex x dose interaction analysis with model comparison and diagnostics.",
+      "highlights": [],
+      "keywords": ["R", "GLM"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://github.com/aleex-cs/beetle-mortality-glm",
+      "type": "academic"
+    },
+    {
+      "name": "loglinear-analysis",
+      "description": "Three-way contingency table analysis of the Spanish National Health Survey (ENSE 2017), studying associations between BMI, sex, age and region with Cochran-Mantel-Haenszel tests.",
+      "highlights": [],
+      "keywords": ["R", "Loglinear Models"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://github.com/aleex-cs/loglinear-analysis",
+      "type": "academic"
+    },
+    {
+      "name": "loglinear-models",
+      "description": "Log-linear modelling of ordinal contingency tables, with model selection by AIC and marginal homogeneity testing between symmetry and quasi-symmetry models.",
+      "highlights": [],
+      "keywords": ["R", "Ordinal Data"],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "type": "academic"
+    },
+    {
+      "name": "cycles-and-connected-components-in-graphs",
+      "description": "Program that builds graphs on a 2D grid with local and knight-move connections, detecting cycles and connected components via DFS, with matplotlib visualization.",
+      "highlights": [],
+      "keywords": ["Python", "Graph Theory"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://github.com/aleex-cs/cycles-and-connected-components-in-graphs",
+      "type": "academic"
+    },
+    {
+      "name": "2d-hill-climbing-optimization",
+      "description": "Hill Climbing optimization over a 2D function surface with Monte Carlo restarts, comparing four memoization strategies against brute-force search on runtime and accuracy.",
+      "highlights": [],
+      "keywords": ["Python", "Optimization"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://github.com/aleex-cs/2d-hill-climbing-optimization",
+      "type": "academic"
+    }
+  ],
+  "meta": {
+    "canonical": "https://aleex-cs.github.io/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2026-09-10"
+  }
+}

@@ -1,0 +1,203 @@
+ALEX CUGNOD SEGOVIA
+Data Scientist - Statistician - Machine Learning
+
+(+34) 657 10 36 60 | alex.cugnod@proton.me | Valladolid, Spain
+LinkedIn: https://www.linkedin.com/in/alex-cugnod-6b0b48315/
+GitHub: https://github.com/aleex-cs
+Portfolio: https://aleex-cs.github.io/
+
+============================================================
+PROFILE
+============================================================
+Statistician and Data Scientist with hands-on experience building
+data-driven solutions for industrial manufacturing at Renault Group.
+Strong background in statistical modeling, machine learning,
+predictive analytics and data visualization, with end-to-end
+experience turning fragmented business data into practical
+analytical applications. Experienced in Python, statistical
+modeling, time series and Streamlit, with a strong focus on
+solving open-ended problems independently.
+
+============================================================
+PROFESSIONAL EXPERIENCE
+============================================================
+
+Data Scientist & Software Engineer
+Renault Group - Innovation Department | Palencia, Spain
+Jan 2026 - Present
+
+Absenteeism Analytics & Prediction Platform:
+- Built an end-to-end absenteeism analytics platform integrating
+  React, FastAPI, Python, Looker, local datasets and web/JSON
+  sources, working with 3M+ person-day records across 99 variables
+  and growing.
+- Developed the application architecture from data processing and
+  API services to an interactive React frontend, replacing
+  fragmented Excel/legacy-tool workflows with a centralized
+  analytical platform.
+- Built 10+ functional modules covering factory, department,
+  workshop, UET and employee-level analysis, with cascading filters
+  and interactive data exploration.
+- Implemented authentication, sessions, role-based access control,
+  employee management, configuration management and automated
+  reporting through a FastAPI backend and React frontend.
+- Developed interactive analytical dashboards with Plotly,
+  including absenteeism evolution, organizational breakdowns,
+  employee tracking, recurrence analysis and operational KPIs.
+- AI assistant: integrated a natural-language assistant capable of
+  querying absenteeism data within the user's current organizational
+  scope and returning tables, charts and employee-level results.
+- Forecasting: developed experimental absenteeism forecasting models
+  using Elastic Net, Random Forest and SARIMAX, with calendar
+  features, lagged variables and temporal validation.
+- Designed a walk-forward validation framework from scratch to
+  evaluate forecasting performance while avoiding temporal data
+  leakage.
+- Worked with managers, HR and operational stakeholders to identify
+  data-quality issues and define consistent absenteeism metrics and
+  business rules.
+
+Production Analytics & Optimization:
+- Maintained and extended Docuzilla, a Python/DuckDB tool used
+  daily by Renault engineers to identify similar vehicle
+  configurations and investigate production issues.
+- Optimized core processing logic, reducing execution time to less
+  than 10% of the original runtime, while developing new features
+  and algorithmic improvements.
+- Developed an experimental next-day factory gas-consumption
+  forecasting model using historical consumption, production and
+  weather data.
+- Designed a PostgreSQL database for quality-management dossiers,
+  including schema, relationships, constraints, indexes and views.
+
+Data Scientist / Analyst
+ITACyL - Agricultural Technological Institute of Castilla y Leon | Valladolid, Spain
+Apr 2025 - Jul 2025
+- Developed the institute's first predictive modeling approach for
+  common vole population dynamics using historical regional data
+  through 2024.
+- Built statistical and machine learning models in R and Python
+  with spatial and temporal validation; reduced 145 candidate
+  variables to 12 key predictors.
+- Achieved R2 = 0.75 in geographical validation and >95% accuracy
+  in forecasting population trend direction.
+- Identified demographic cycles ranging from approximately 2 to
+  7 years.
+
+============================================================
+SELECTED PERSONAL PROJECTS
+============================================================
+
+SignalDesk
+Python, FastAPI, Finance, Machine Learning
+Demo: https://signaldesk-q9n7.onrender.com/
+Research tool for prioritizing insider-trading filings, combining
+SEC Form 4 data, market context and anomaly detection into
+quantitative BUY/SELL/HOLD/IGNORE signals with confidence scores -
+plus a public transparency track record benchmarked against the
+S&P 500.
+
+Earnings Call NLP Pipeline
+Python, FastAPI, FinBERT, NLP
+Demo: https://earnings-call-nlp.onrender.com/ | GitHub: https://github.com/aleex-cs/earnings-call-nlp
+Dashboard that scores SEC 8-K Exhibit 99.1 earnings releases with
+FinBERT, tracks uncertainty language over time, compares issuers,
+and overlays next-session stock returns versus SPY.
+
+Music Stats
+Python, Streamlit
+Demo: https://musicstats.streamlit.app/ | GitHub: https://github.com/aleex-cs/music_stats
+Listening-habits dashboard built on Last.fm scrobble history, with
+sunburst charts, streamgraphs, animated bar-chart races and
+automatic listening-session detection.
+
+DataPipe (Work in Progress)
+FastAPI, React, D3.js, Static Analysis
+Code analysis and visualization tool that turns a zipped Python
+project into an interactive graph of its data flow, showing every
+read, transformation and processing step from source to output.
+
+Literary Character Stylometry (Work in Progress)
+Python, NLP, LLM, spaCy
+NLP/LLM pipeline that compares literary characters across books to
+find psychological and narrative similarities, using a local LLM
+for profile generation and multilingual embeddings for similarity
+scoring.
+
+WatchList (Work in Progress)
+Python, JavaScript, Supabase, TMDB API
+Full social web app for tracking films and shows, with
+authentication, episode-by-episode tracking, detailed viewing
+statistics, awards tracking and a bulk-import system from
+spreadsheets.
+
+Movie Stats
+Python, Streamlit
+Three-year personal project analyzing ~900 films using a
+curated/scraped dataset, with interactive statistical analyses and
+visualizations.
+
+Financial Portfolio Optimization
+R, Finance, Markowitz Model, Statistics
+GitHub: https://github.com/aleex-cs/financial-portfolio-optimization
+Analysis and optimization of a seven-stock portfolio (2020-2025):
+efficient frontier, robust covariance estimation, and comparison of
+minimum-variance, maximum-return, maximum-Sharpe-ratio and
+equal-weighted portfolios.
+
+============================================================
+EDUCATION
+============================================================
+BSc in Statistics
+University of Valladolid (UVa) | Valladolid, Spain
+Sep 2021 - Jul 2025
+Thesis grade: 9.8 / 10.
+Thesis: "Predictive Models for Common Vole Population Fluctuations
+and Agricultural Crop Risk" - early-warning modeling using
+time-series analysis.
+
+============================================================
+TECHNICAL SKILLS
+============================================================
+Programming: Python, R, SQL, JavaScript, Java, C
+
+Data Science & Statistics: Regression, GLM, LASSO, Elastic Net,
+Random Forest, Gradient Boosting, SARIMAX, ETS, STL, PCA,
+Clustering, Bayesian Methods, Feature Engineering, Time Series
+
+Data & Visualization: Pandas, NumPy, Scikit-learn, Plotly, Power BI,
+Looker, Streamlit
+
+Web & APIs: React, FastAPI, REST APIs, Vite, React Router, HTML/CSS
+
+Databases & Tools: PostgreSQL, DuckDB, Supabase, Git, Excel, SAS,
+MATLAB, SPSS, AWS, Azure
+
+Other: Web Scraping, APIs, AI Agents, RAG, Data Pipelines,
+Predictive Modeling
+
+============================================================
+CERTIFICATIONS & TRAINING
+============================================================
+Renault Group: Looker SSBD Training
+
+LinkedIn Learning:
+- Agentic AI: Building Data-First AI Agents
+  https://www.linkedin.com/learning/certificates/2b9aa83b226385c3b98be14f3d1f709c41ba341da7576b73d2c45252afe4388f
+- Build with AI: Autonomous Agents with LangChain and Hugging Face
+  https://www.linkedin.com/learning/certificates/08f4a6c5994d211d9ed641870e6ef263fa5ce743c299e3a916ccd00ca31f6ab2
+- Building a Personalized Chatbot with OpenAI and LangChain
+  https://www.linkedin.com/learning/certificates/d58803a73453eb3a21fb0d6e04cb1178cfa47a0e417007651b1c65092bd8222a
+- Program Evaluation for Data Science
+  https://www.linkedin.com/learning/certificates/308e4f684573e60adc641f576f9d6640e25de20a0b2cf4c1c25c62671a5c8b8b
+- Advanced NoSQL for Data Science
+  https://www.linkedin.com/learning/certificates/9b2c5bcb25de3952842363b87d5f2b2396f9123955e2969742671da3a38d4220
+- AWS Certified Machine Learning - Specialty (MLS-C01) Cert Prep
+  https://www.linkedin.com/learning/certificates/c6980b87f040dd6cce36d2004715f9fae47e43a742152da339a9abcda7a7b52f
+
+============================================================
+LANGUAGES
+============================================================
+Spanish: Native
+English: Full Professional Proficiency
+Italian: Upper-Intermediate / Advanced
